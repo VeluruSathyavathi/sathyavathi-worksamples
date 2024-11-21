@@ -1,0 +1,91 @@
+@media screen and (max-width: 975px) and (max-height: 255px) and (min-width: 965px) and (min-height: 245px) {
+
+  #banner {
+    width: 970px;
+    height: 250px;
+    position: absolute;
+        background-color: #F9E4EF;
+
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 11px solid #A345BC;
+        overflow: hidden;
+  }
+  #copy_1{
+    position: absolute;
+    left: 25px;
+    top: 20px;
+    width: 640px;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: bold;
+  }
+  #copy_sub_2{
+    position: absolute;
+    left: 25px;
+    top: 20px;
+    width: 640px;
+    font-size: 26px;
+    line-height: 32px;
+    font-weight: bold;
+  }
+  #thirdFrame{
+    position: absolute;
+    left: 25px;
+    top: 20px;
+    width: 410px;
+  }
+  .marginBtm{
+    margin-bottom: 3px;
+  }
+  #copy_2{
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+  #copy_sub_3{
+    font-size: 14px;
+    line-height: 18px;
+  }
+  #copy_3{
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: bold;
+  }
+  #cta_1{
+    position: absolute;
+    font-family: 'Raleway', sans-serif;
+    background-color: #B45AD4;
+    max-width: 170px;
+    height: 40px;
+    top: 170px;
+    left: 544px;
+  }
+  #cta_desktop{
+    font-size: 13px;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 14px 18px;
+    text-align: center;
+  }
+  .logo_align{
+    position: absolute;
+    left: 20px;
+    top: 128px;
+    width: 95px;
+    height: 95px;
+  }
+  #scrollbar-container{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 255px;
+    height: 228px;
+    background-color: #ffffff;
+  }
+  #content-container{
+    padding: 12px;
+    width: 222px;
+  }
+}

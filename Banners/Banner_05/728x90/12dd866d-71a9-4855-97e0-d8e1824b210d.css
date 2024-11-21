@@ -1,0 +1,89 @@
+@media screen and (max-width: 305px) and (max-height: 605px) and (min-width: 295px) and (min-height: 595px) {
+
+    #banner {
+        width: 300px;
+        height: 600px;
+        position: absolute;
+        background-color: #F9E4EF;
+
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        border: 11px solid #A345BC;
+        overflow: hidden;
+      }
+      #copy_1{
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        width: 243px;
+        font-size: 25px;
+        line-height: 34px;
+        font-weight: bold;
+      }
+      #copy_sub_2{
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        width: 243px;
+        font-size: 25px;
+        line-height: 34px;
+        font-weight: bold;
+      }
+      #thirdFrame{
+        position: absolute;
+        left: 18px;
+        top: 18px;
+        width: 235px;
+      }
+      .marginBtm{
+        margin-bottom: 8px;
+      }
+      #copy_2{
+        font-size: 22px;
+        line-height: 27px;
+        font-weight: bold;
+      }
+      #copy_sub_3{
+        font-size: 16px;
+        line-height: 21px;
+      }
+      #copy_3{
+        font-size: 32px;
+        line-height: 41px;
+        font-weight: bold;
+      }
+      #cta_1{
+        position: absolute;
+        font-family: 'Raleway', sans-serif;
+        background-color: #B45AD4;
+        color: #3E3E3E;
+        max-width: 172px;
+        height: 34px;
+        top: 380px;
+        left: 22px;
+        text-align: center;
+      }
+      #cta_desktop{
+        font-size: 11px;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 12px;
+        text-align: center;
+      }
+      .logo_align{
+        position: relative;
+        left: 15px;
+        top: 320px;
+        width: 100px;
+        height: 100px;
+      }
+      #scrollbar-container{
+        width: 278px;
+        height: 149px;
+      }
+      #content-container{
+        padding: 12px;
+        width: 245px;
+      }
+}
