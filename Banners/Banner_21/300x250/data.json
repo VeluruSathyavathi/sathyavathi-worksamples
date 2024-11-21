@@ -1,0 +1,124 @@
+{
+	"Width": 300,
+	"Height": 250,
+
+	"Static_Pause_Time": 1,
+	"OtherSizes": "160x600, 300x600, 728x90, 970x250, 300x250",
+	
+	"NB_Image_Destination": {
+		"VariableType": "Image",
+		"Value": "HM_Holiday.png",
+		"Metadata": {}
+	},
+	"NB_Image_Feature":{
+		"VariableType": "Image",
+		"Value": "HM_Holiday2.png",
+		"Metadata": {}
+	},
+	"NB_Headline_Destination": {
+		"VariableType": "Text",
+		"Value": "Headline Destination",
+		"Metadata": {}
+	},
+	"NB_font_color_1": {
+		"VariableType": "Text",
+		"Value": "#3E3E3E",
+		"Metadata": {}
+	},
+	"NB_txt_align_1": {
+		"VariableType": "Text",
+		"Value": "left",
+		"Metadata": {}
+	},
+	"NB_Headline_Feature": {
+		"VariableType": "Text",
+		"Value": "Headline Feature",
+		"Metadata": {}
+	},
+	"NB_Headline_Offer": {
+		"VariableType": "Text",
+		"Value": "Headline Offer",
+		"Metadata": {}
+	},
+	"NB_font_color_2": {
+		"VariableType": "Text",
+		"Value": "#3E3E3E",
+		"Metadata": {}
+	},
+	"NB_txt_align_2": {
+		"VariableType": "Text",
+		"Value": "center",
+		"Metadata": {}
+	},
+	"NB_Offer_Detail": {
+		"VariableType": "Text",
+		"Value": "Offer Detail",
+		"Metadata": {}
+	},
+	"NB_font_color_3": {
+		"VariableType": "Text",
+		"Value": "#3E3E3E",
+		"Metadata": {}
+	},
+	"NB_txt_align_3": {
+		"VariableType": "Text",
+		"Value": "center",
+		"Metadata": {}
+	},
+	"NB_font_color_4": {
+		"VariableType": "Text",
+		"Value": "#3E3E3E",
+		"Metadata": {}
+	},
+	"NB_txt_align_4": {
+		"VariableType": "Text",
+		"Value": "center",
+		"Metadata": {}
+	},
+	"NB_Price": {
+		"VariableType": "Text",
+		"Value": "Price",
+		"Metadata": {}
+	},
+	"NB_font_color_6": {
+		"VariableType": "Text",
+		"Value": "#3E3E3E",
+		"Metadata": {}
+	},
+	"NB_txt_align_6": {
+		"VariableType": "Text",
+		"Value": "left",
+		"Metadata": {}
+	},
+	"NB_font_color_5": {
+		"VariableType": "Text",
+		"Value": "#C7232F",
+		"Metadata": {}
+	},
+	"NB_font_color_7": {
+		"VariableType": "Text",
+		"Value": "#3E3E3E",
+		"Metadata": {}
+	},
+	"NB_txt_align_7": {
+		"VariableType": "Text",
+		"Value": "center",
+		"Metadata": {}
+	},
+	"NB_Cta": {
+		"VariableType": "Text",
+		"Value": "Button",
+		"Metadata": {}
+	},
+	"NB_Logo_01": {
+		"VariableType": "Image",
+		"Value": "hm_logo.png",
+		"Metadata": {}
+	},
+	"NB_Footer_Text": {
+		"VariableType": "Text",
+		"Value": "Terms and Conditions Terms and Conditions Terms and Conditions Terms and Conditions Terms and Conditions",
+		"Metadata": {}
+	}
+}
+

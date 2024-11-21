@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="fonts.css" inline>
+  <link rel="stylesheet" href="main.css" inline>
+
+  <link rel="stylesheet" href="breakpoint_160x600.css" inline>
+  <link rel="stylesheet" href="breakpoint_300x250.css" inline>
+  <link rel="stylesheet" href="breakpoint_300x600.css" inline>
+  <link rel="stylesheet" href="breakpoint_728x90.css" inline>
+  <link rel="stylesheet" href="breakpoint_970x250.css" inline>
+
+  <!-- Greensock -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+  <!-- ClickTag value setup/fallback -->
+  <script type="text/javascript">
+    /* Main Link*/
+    var clickTag = "#";
+  </script>
+
+  <title></title>
+
+</head>
+
+<body>
+  <div id="banner" class="">
+    <div id="image_1">
+      <img src="HM_Holiday.png" alt="" class="img1" id="altImg" data-bind="attr:{src:NB_Image_Destination.Value}">
+    </div>
+    <div id="image_2" class="hide">
+      <img src="HM_Holiday2.png" alt="" class="img1" id="altImg2" data-bind="attr:{src:NB_Image_Feature.Value}">
+    </div>
+    <div id="copy_1" data-bind="html:NB_Headline_Destination.Value, style:{color:NB_font_color_1.Value, textAlign:NB_txt_align_1.Value}">
+      The journey of a thousand miles begins with a single step.
+    </div>
+
+    <div id="copy_sub1" class="hide"
+      data-bind="html:NB_Headline_Feature.Value, style:{color:NB_font_color_1.Value, textAlign:NB_txt_align_1.Value}">
+      Et regardez le coucher de soleil sur le désert lors d'une randonnée à dos de chameau!
+    </div>
+ 
+    <div id="thirdFrame" class="hide thirdFrame">
+      <div id="copy_2" class="marginBtm" data-bind="html:NB_Headline_Offer.Value, style:{color:NB_font_color_2.Value, textAlign:NB_txt_align_2.Value}">
+        7 nuits tout compris en Resort 5*, avec expérience hors route gratuite
+      </div>
+
+      <div id="flexAlign" class="flexGroup">
+        
+        <div id="copy_sub_3" class="marginBtm" data-bind="html:NB_Offer_Detail.Value, style:{color:NB_font_color_3.Value, textAlign:NB_txt_align_3.Value}">
+          Direct flights from London Heathrow from
+        </div>
+        
+        <div id="copy_3" data-bind="html:NB_Price.Value, style:{color:NB_font_color_4.Value, textAlign:NB_txt_align_4.Value}">
+          £8,800
+        </div>
+
+      </div>
+    </div>
+   
+    <div id="cta_1" class="hide" data-bind="html:NB_Cta.Value, style:{color:NB_font_color_6.Value, textAlign:NB_txt_align_6.Value, backgroundColor:NB_font_color_5.Value}">
+      Discover more today
+    </div>
+
+    <div id="bottom_Txt" class="hide" data-bind="html:NB_Footer_Text.Value, style:{color:NB_font_color_7.Value, textAlign:NB_txt_align_7.Value}">
+      Terms and Conditions Terms and Conditions Terms and Conditions Terms and Conditions Terms and Conditions
+    </div>
+    
+    <div id="logoImg">
+      <img src="hm_logo.png" alt="" id="logoAlign" data-bind="attr:{src:NB_Logo_01.Value}">
+    </div>
+
+    <!-- Exit Link -->
+    <div id="exit_link"></div>
+
+  </div><!-- BANNER CONTAINER -->
+
+</body>
+
+<!-- Text Shrink script if needed -->
+<script type="text/javascript" src="text_shrink.js" inline></script>
+
+<script type="text/javascript">
+
+  var globalTimeline = {
+   delay: 0,
+   repeat: 1,
+   repeatDelay: 0,
+  }
+  
+  var element = {
+    banner: document.getElementById('banner'),
+    image_1: document.getElementById('image_1'),
+    image_2: document.getElementById('image_2'),
+    altImg: document.getElementById('altImg'),
+    altImg2: document.getElementById('altImg2'),
+    copy_1: document.getElementById('copy_1'),
+    copy_sub1: document.getElementById('copy_sub1'),
+    logoAlign: document.getElementById('logoAlign'),
+    thirdFrame: document.getElementById('thirdFrame'),
+    copy_2: document.getElementById('copy_2'),
+    copy_sub_3: document.getElementById('copy_sub_3'),
+    copy_3: document.getElementById('copy_3'),
+    logoImg: document.getElementById('logoImg'),
+    cta_1: document.getElementById('cta_1'),
+    cta_desktop: document.getElementById('cta_desktop'),
+    bottom_Txt: document.getElementById('bottom_Txt'),
+    exit_link: document.getElementById('exit_link'),
+    guide_img: document.getElementById('guide_img'),
+  }
+</script>
+
+<script type="text/javascript" src="animation_160x600.js" inline></script>
+<script type="text/javascript" src="animation_300x250.js" inline></script>
+<script type="text/javascript" src="animation_300x600.js" inline></script>
+<script type="text/javascript" src="animation_728x90.js" inline></script>
+<script type="text/javascript" src="animation_970x250.js" inline></script>
+<script type="text/javascript">
+
+  ////////////
+  /// VARS ///
+  ////////////
+
+  function init() {
+    /////////////////////////////////////////////////////////
+    /// GET THE BANNER SIZE TO LOAD THE CORRECT ANIMATION ///
+    /////////////////////////////////////////////////////////
+
+    var bannerSize = {
+      w: window.innerWidth,
+      h: window.innerHeight
+    }
+
+    console.log('bannerSize: ', bannerSize)
+
+    if (bannerSize.w == 160 && bannerSize.h == 600) {
+      console.log('THIS IS 160x600');
+      animation_160x600()
+
+    } else if (bannerSize.w == 300 && bannerSize.h == 250) {
+      console.log('THIS IS 300x250');
+      animation_300x250()
+
+    } else if (bannerSize.w == 300 && bannerSize.h == 600) {
+      console.log('THIS IS 300x600');
+      animation_300x600()
+
+    } else if (bannerSize.w == 728 && bannerSize.h == 90) {
+      console.log('THIS IS 728x90');
+      animation_728x90()
+
+    } else if (bannerSize.w == 970 && bannerSize.h == 250) {
+      console.log('THIS IS 970x250');
+      animation_970x250()
+
+    } 
+
+    //////////////////////////
+    /// ANIMATION PER SIZE ///
+    //////////////////////////        
+
+    ////////////////////
+    /// EXIT HANDLER ///
+    ////////////////////
+
+    function exitLink() {
+      console.log('exit Clicked')
+      window.open(clickTag, "_blank")
+    }
+    element.exit_link.addEventListener("click", exitLink); //Desktop
+
+  }
+
+  //Run the banner with a 1/10th of a second delay to queue the JS after onLoad()
+  setTimeout(() => {
+    init()
+  }, 100);
+</script>
+
+</html>
