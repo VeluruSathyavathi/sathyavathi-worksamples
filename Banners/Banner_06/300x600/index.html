@@ -1,0 +1,2750 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <style>.ss-wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  float: left;
+}
+
+.ss-content {
+  height: 100%;
+  width: calc(100% + 18px);
+  padding: 0 0 0 0;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+.ss-content.rtl {
+  width: calc(100% + 18px);
+  right: auto;
+}
+
+.ss-scroll {
+  position: relative;
+  background: rgba(0, 0, 0, 0.1);
+  width: 9px;
+  border-radius: 4px;
+  top: 0;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.25s linear;
+}
+
+.ss-hidden {
+  display: none;
+}
+
+.ss-container:hover .ss-scroll,
+.ss-container:active .ss-scroll {
+  opacity: 1;
+}
+
+.ss-grabbed {
+  -o-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+</style>
+      <style>/* CSS BROWSER RESET */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* font-size: 100%; */
+    font: inherit;
+    vertical-align: baseline;
+    font-family: "Raleway", sans-serif;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.width_100 {
+    width: 100%;
+}
+
+
+
+
+/* CSS STARTS HERE */
+
+body,
+div,
+img {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway';
+    font-weight: 400;
+}
+
+#banner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #fff;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    overflow: hidden;
+}
+
+.image_container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+#copy_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#bottom_Txt {
+    width: 100%;
+    text-align: center;
+    line-height: 1.3em;
+}
+
+.end_price {
+    font-weight: 700;
+}
+
+#bkg1 img,
+#bkg2 img,
+#bkg3 img {
+    width: 100%;
+    height: 100%;
+
+}
+
+#cta {
+    white-space: nowrap;
+    display: inline-block;
+    font-weight: 600;
+}
+
+#exit_link {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.medium_text {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.2em;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+.small_text {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.1em;
+    font-weight: 500;
+    letter-spacing: 0px;
+}
+
+.secondary_text {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.1em;
+    font-weight: 600;
+    letter-spacing: 0px;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.displayNone {
+    display: none;
+}
+
+.displayBlock {
+    display: block;
+}
+
+#logo_mb img {
+    width: 100%;
+}
+
+
+.super-s {
+    font-size: 30px;
+}
+
+.super-s sup {
+    font-size: 1em;
+}
+
+
+.copy,
+.copy_6 {
+    /* background-color: rgba(255, 0, 0, 0.5); */
+}
+
+#bkg1>img,
+#bkg2>img,
+#bkg3>img,
+#bkg4>img {
+    /*height: auto;*/
+    -webkit-backface-visibility: hidden;
+    -ms-transform: translateZ(0);
+    /* IE 9 */
+    -webkit-transform: translateZ(0);
+    /* Chrome, Safari, Opera */
+    transform: translateZ(0);
+}
+
+
+
+#fontRoboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+#fontRaleway {
+    font-family: 'Raleway', sans-serif;
+}
+
+#fontMontserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+#fontOswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+
+#outlineBorder {
+    z-index: 2;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    border-color: #29244A;
+    background-color: transparent;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#outlineBorderEndframe {
+    z-index: 2;
+    opacity: 1;
+    display: block;
+    position: absolute;
+    border-color: #29244A;
+    background-color: transparent;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#whiteBackground {
+    display: block;
+    position: absolute;
+    background-color: #ffff;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+#content-container {
+    position: absolute;
+    background-color: transparent;
+    font-size: 10px;
+    line-height: 11px;
+}
+
+.ss-scroll {
+    position: relative;
+    background: #fff;
+    width: 6px;
+    border-radius: 4px;
+    top: 0;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.25s linear;
+}
+
+/* ---------------- COPY STYLING ---------------- */
+
+.NOWRAP {
+    white-space: nowrap;
+}
+
+.BOLD {
+    font-weight: bold;
+}
+
+.SML_BUTTON {
+    border: #ffffff 1px solid !important;
+    padding: 5px 12px !important;
+    border-radius: 50px !important;
+}
+
+.MED_BUTTON {
+    border: #ffffff 1px solid !important;
+    padding: 10px 24px !important;
+    border-radius: 50px !important;
+}
+
+.LGE_BUTTON {
+    border: #ffffff 1px solid !important;
+    padding: 14px 34px !important;
+    border-radius: 50px !important;
+}</style>
+      
+      <!-- Add new size breakpoints -->
+      <style>@media screen and (max-width: 165px) and (max-height: 605px) and (min-width: 155px) and (min-height: 595px) {
+
+
+  img {
+    width: 100%;
+  }
+
+  #banner {
+    width: 160px;
+    height: 600px;
+    background-color: #EDBEEA;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #outlineBorder {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: transparent;
+    color: #ffff;
+  }
+
+  #outlineBorderEndframe {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: transparent;
+    color: #6a6a6a;
+  }
+
+  .outline-border {
+    opacity: 1;
+    display: block;
+    position: absolute;
+  }
+
+  #copyContainer,
+  #copy_box {
+    width: 100%;
+  }
+
+  .image-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+  }
+
+  #bkg1,
+  #bkg2 {
+    width: 100%;
+    height: 100%;
+  }
+
+  #copy_box {
+    left: 12px;
+    top: 382px;
+    height: 105px;
+    box-sizing: border-box;
+    width: 85%;
+  }
+
+  .logo_container {
+    width: 50%;
+    height: auto;
+    /* display: flex; */
+    /* align-self: center; */
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* align-content: initial; */
+    /* margin: 0 auto; */
+    position: absolute;
+    right: 5%;
+    top: 92.5%;
+    height: 36px;
+    max-width: 72px;
+  }
+
+  #logo_pink {
+    padding-top: 2px;
+    height: 100%;
+    width: auto;
+    text-align: right;
+    margin: auto;
+    box-sizing: border-box;
+  }
+
+  #logo_pink img {
+    height: 100%;
+    object-fit: contain;
+    width: auto;
+  }
+
+  .into-copy-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+
+  .copy-container {
+    width: 92%;
+    height: 92%;
+    position: absolute;
+    top: 4%;
+    left: 4%;
+  }
+
+  .copy {
+    font-size: 1.15em;
+  }
+
+  .copy_headline,
+  .copy_secondary {
+    font-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    line-height: 1.15em;
+  }
+
+  .end_frame_container {
+    width: 88%;
+    height: 82%;
+  }
+
+  .end_frame_container {
+    width: 100%;
+    height: 370px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 12px;
+    background-color: #A345BC;
+  }
+
+  #copy_3 {
+    font-size: 120%
+  }
+
+  .end_copy {
+    display: block;
+    text-align: left;
+    font-weight: 700;
+    line-height: 1.15em;
+  }
+
+  .offer_details_copy {
+    line-height: 1.15em;
+    padding-top: 10%;
+    font-size: 60%;
+    display: block;
+    text-align: left;
+  }
+
+  .end_price {
+    padding-top: 8%;
+    font-size: 140%;
+    display: block;
+    text-align: left;
+    font-weight: 700;
+  }
+
+  /* cta */
+
+  #cta_wrapper {
+    display: block;
+    padding-top: 25%;
+    padding-bottom: 5%;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: right;
+  }
+
+  #cta {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    color: #EDBEEA;
+    border-radius: 25px;
+    opacity: 1;
+    font-size: 68%;
+    line-height: 1.2em;
+    display: inline-block;
+    /* width: auto; */
+    height: auto;
+    padding: 8px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    font-weight: 700;
+  }
+
+
+  #cta span {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  #scrollbar-container {
+    width: 86%;
+    height: 25%;
+    position: absolute;
+    bottom: 70px;
+    overflow: hidden;
+    background: transparent;
+    padding: 5px 0;
+    box-sizing: border-box;
+    z-index: 1;
+    left: 12px;
+  }
+
+  #content-container {
+    width: 88%;
+    padding: 0px 0px;
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .on {
+    opacity: 1;
+  }
+
+  .off {
+    opacity: 0.5;
+  }
+
+  .visible {
+    display: block;
+  }
+
+  .invisible {
+    display: none;
+  }
+
+  .hDPI {
+    background-size: cover;
+  }
+
+  /*scrollbar*/
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #01acee;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white;
+  }
+
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: #8d8484;
+  }
+
+  .hovered {
+    opacity: 0.8 !important;
+  }
+
+  .textStyle_b {
+    color: white;
+    font-size: 90%;
+    line-height: 1.2em;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  .bannerSize {
+    width: 260px;
+    height: 600px;
+  }
+
+  .zIndex {
+    z-index: 99;
+  }
+
+  .rotateScale {
+    transform: rotate(-26deg) scale(3, 3);
+    transform-origin: 50% 50%;
+  }
+
+  .scaleIn {
+    transform: scale(3, 3);
+    transform-origin: 50% 50%;
+  }
+
+  .slideIn {
+    transform: scale(3, 3);
+    opacity: 0;
+    transform-origin: 50% 50%;
+  }
+
+  #fontRoboto {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #fontRaleway {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  #fontMontserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .horizontal_hide {
+    display: none;
+  }
+}</style>
+      <style>@media screen and (max-width: 305px) and (max-height: 255px) and (min-width: 295px) and (min-height: 245px) {
+
+  img {
+    width: 100%;
+  }
+
+  #banner {
+    width: 300px;
+    height: 250px;
+    background-color: #EDBEEA;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #outlineBorder {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: transparent;
+    color: #ffff;
+  }
+
+  #outlineBorderEndframe {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: transparent;
+    color: #6a6a6a;
+  }
+
+  .outline-border {
+    opacity: 1;
+    display: block;
+    position: absolute;
+  }
+
+  #copyContainer,
+  #copy_box {
+    width: 100%;
+  }
+
+  #copy_box {
+    left: 9px;
+    top: 178px;
+    height: 65px;
+    box-sizing: border-box;
+    width: 70%;
+  }
+
+  .image-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 172px;
+    overflow: hidden;
+  }
+
+  #bkg1,
+  #bkg2 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .logo_container {
+    width: auto;
+    height: 50px;
+    position: absolute;
+    right: 4%;
+    top: 77%;
+    max-width: 58px;
+  }
+
+  #logo_pink {
+    padding-top: 2px;
+    height: 100%;
+    width: auto;
+    text-align: center;
+    margin: auto;
+  }
+
+  #logo_pink img {
+    /* width: 90px; */
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .into-copy-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .copy-container {
+    width: 92%;
+    height: 92%;
+    position: absolute;
+    top: 4%;
+    left: 4%;
+  }
+
+  .copy {
+    font-size: 1em;
+  }
+
+  .copy_headline,
+  .copy_secondary {
+    font-size: 96%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    line-height: 1.15em;
+  }
+
+  .end_frame_container {
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    background-color: #A345BC;
+  }
+
+  #copy_3 {
+    font-size: 85%;
+  }
+
+  .end_copy {
+    display: block;
+    text-align: left;
+    font-weight: 700;
+  }
+
+  .offer_details_copy {
+    padding-top: 3%;
+    font-size: 75%;
+    display: block;
+    text-align: left;
+  }
+
+  .end_price {
+    padding-top: 3%;
+    font-size: 165%;
+    display: block;
+    text-align: left;
+    font-weight: 700;
+  }
+
+  /* cta */
+
+  #cta_wrapper {
+    display: block;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: right;
+  }
+
+  #cta {
+    text-align: center;
+    background-color: #fff;
+    color: #EDBEEA;
+    border-radius: 22px;
+    opacity: 1;
+    font-size: 70%;
+    line-height: 1em;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 10px 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 700;
+  }
+
+  #cta span {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  #scrollbar-container {
+    width: 210px;
+    height: 65px;
+    position: absolute;
+    left: 9px;
+    bottom: 7px;
+    overflow: hidden;
+    background: transparent;
+    padding: 7px 0 5px;
+    box-sizing: border-box;
+    z-index: 1;
+  }
+
+  #content-container {
+    width: 91%;
+  }
+
+  .on {
+    opacity: 1;
+  }
+
+  .off {
+    opacity: 0.5;
+  }
+
+  .visible {
+    display: block;
+  }
+
+  .invisible {
+    display: none;
+  }
+
+  .hDPI {
+    background-size: cover;
+  }
+
+  /*scrollbar*/
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #01acee;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white;
+  }
+
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: #8d8484;
+  }
+
+  .hovered {
+    opacity: 0.8 !important;
+  }
+
+  .textStyle_b {
+    color: white;
+    font-size: 90%;
+    line-height: 1.2em;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  .bannerSize {
+    width: 300px;
+    height: 250px;
+  }
+
+  .zIndex {
+    z-index: 99;
+  }
+
+  .rotateScale {
+    transform: rotate(-26deg) scale(3, 3);
+    transform-origin: 50% 50%;
+  }
+
+  .scaleIn {
+    transform: scale(3, 3);
+    transform-origin: 50% 50%;
+  }
+
+  .slideIn {
+    transform: scale(3, 3);
+    opacity: 0;
+    transform-origin: 50% 50%;
+  }
+
+  #fontRoboto {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #fontRaleway {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  #fontMontserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .horizontal_hide {
+    display: none;
+  }
+
+}</style>
+      <style>@media screen and (max-width: 305px) and (max-height: 605px) and (min-width: 295px) and (min-height: 595px) {
+
+  img {
+    width: 100%;
+  }
+
+  #banner {
+    width: 300px;
+    height: 600px;
+    background-color: #EDBEEA;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #outlineBorder {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: transparent;
+    color: #ffff;
+  }
+
+  #outlineBorderEndframe {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: transparent;
+    color: #6a6a6a;
+  }
+
+  .outline-border {
+    opacity: 1;
+    display: block;
+    position: absolute;
+  }
+
+  #copyContainer,
+  #copy_box {
+    width: 100%;
+  }
+
+  .image-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 401px;
+    overflow: hidden;
+  }
+
+  #bkg1,
+  #bkg2 {
+    width: 100%;
+    height: 100%;
+  }
+
+  #copy_box {
+    left: 18px;
+    top: 421px;
+    height: 105px;
+    box-sizing: border-box;
+    width: 88%;
+  }
+
+  .logo_container {
+    width: auto;
+    height: 50px;
+    position: absolute;
+    right: 5%;
+    top: 89%;
+    max-width: 100px;
+  }
+
+  #logo_pink {
+    padding-top: 2px;
+    height: 100%;
+    width: auto;
+    text-align: right;
+    margin: auto;
+    box-sizing: border-box;
+  }
+
+  #logo_pink img {
+    height: 100%;
+    object-fit: contain;
+    width: auto;
+  }
+
+  .into-copy-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+  }
+
+  .copy-container {
+    width: 92%;
+    height: 92%;
+    position: absolute;
+    top: 4%;
+    left: 4%;
+  }
+
+  .copy {
+    font-size: 1.4em;
+  }
+
+  .copy_headline,
+  .copy_secondary {
+    font-size: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    line-height: 1.15em;
+  }
+
+  .end_frame_container {
+    width: 88%;
+    height: 82%;
+  }
+
+  .end_frame_container {
+    width: 100%;
+    height: 401px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    background-color: #A345BC;
+  }
+
+  #copy_3 {
+    font-size: 186%
+  }
+
+  .end_copy {
+    display: block;
+    text-align: left;
+    font-weight: 700;
+    line-height: 1.15em;
+  }
+
+  .offer_details_copy {
+    padding-top: 8%;
+    font-size: 58%;
+    display: block;
+    text-align: left;
+  }
+
+  .end_price {
+    padding-top: 8%;
+    font-size: 140%;
+    display: block;
+    text-align: left;
+    font-weight: 700;
+  }
+
+  /* cta */
+
+  #cta_wrapper {
+    display: block;
+    padding-top: 20%;
+    padding-bottom: 5%;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: right;
+  }
+
+  #cta {
+    text-align: center;
+    background-color: #fff;
+    color: #EDBEEA;
+    border-radius: 25px;
+    opacity: 1;
+    font-size: 72%;
+    line-height: 1.2em;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 8px 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 700;
+  }
+
+  #cta span {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  #scrollbar-container {
+    width: 86%;
+    height: 18%;
+    position: absolute;
+    bottom: 75px;
+    overflow: hidden;
+    background: transparent;
+    padding: 7px 0 5px;
+    box-sizing: border-box;
+    z-index: 1;
+    left: 20px;
+  }
+
+  #content-container {
+    width: 90%;
+    padding: 0px 0px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .on {
+    opacity: 1;
+  }
+
+  .off {
+    opacity: 0.5;
+  }
+
+  .visible {
+    display: block;
+  }
+
+  .invisible {
+    display: none;
+  }
+
+  .hDPI {
+    background-size: cover;
+  }
+
+  /*scrollbar*/
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #01acee;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white;
+  }
+
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: #8d8484;
+  }
+
+  .hovered {
+    opacity: 0.8 !important;
+  }
+
+  .textStyle_b {
+    color: white;
+    font-size: 90%;
+    line-height: 1.2em;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  .bannerSize {
+    width: 300px;
+    height: 600px;
+  }
+
+  .zIndex {
+    z-index: 99;
+  }
+
+  .rotateScale {
+    transform: rotate(-26deg) scale(3, 3);
+    transform-origin: 50% 50%;
+  }
+
+  .scaleIn {
+    transform: scale(3, 3);
+    transform-origin: 50% 50%;
+  }
+
+  .slideIn {
+    transform: scale(3, 3);
+    opacity: 0;
+    transform-origin: 50% 50%;
+  }
+
+  #fontRoboto {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #fontRaleway {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  #fontMontserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .horizontal_hide {
+    display: none;
+  }
+}</style>
+      <style>@media screen and (max-width: 733px) and (max-height: 95px) and (min-width: 723px) and (min-height: 85px) {
+
+  img {
+    width: 100%;
+  }
+
+  #banner {
+    width: 728px;
+    height: 90px;
+    background-color: #EDBEEA;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #outlineBorder {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: transparent;
+    color: #ffff;
+  }
+
+  #outlineBorderEndframe {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: transparent;
+    color: #6a6a6a;
+  }
+
+  .outline-border {
+    opacity: 1;
+    display: block;
+    position: absolute;
+  }
+
+  #copy_box,
+  .end_frame_container {
+    width: 62%;
+  }
+
+  #bkg1,
+  #bkg2 {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image-container {
+    position: absolute;
+    left: 451px;
+    top: 0;
+    width: 277px;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .logo_container {
+    width: 100%;
+    position: absolute;
+    right: 287px;
+    bottom: 10px;
+    height: 36px;
+    max-width: 70px;
+  }
+
+  #logo_pink {
+    padding-top: 2px;
+    height: 100%;
+    width: auto;
+    text-align: right;
+    margin: auto;
+  }
+
+  #logo_pink img {
+    width: auto;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .into-copy-container {
+    width: 59%;
+    height: 76%;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .copy-container {
+    width: 92%;
+    height: 92%;
+    position: absolute;
+    top: 4%;
+    left: 4%;
+  }
+
+  .copy {
+    font-size: 1.1em;
+  }
+
+  #copy_3_content {
+    width: 100%;
+    height: 100%;
+  }
+
+  .copy_headline,
+  .copy_secondary {
+    font-size: 100%;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    line-height: 1.25em;
+  }
+
+  .end_frame_container {
+    height: 100%;
+    background-color: #A345BC;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 8px;
+  }
+
+  #copy_3 {
+    font-size: 87%;
+    width: 68%;
+  }
+
+  #copy_4 {
+    width: 60%;
+  }
+
+  #copy_5 {
+    width: 50%;
+  }
+
+  #copyContainer {
+    width: 29%;
+    position: absolute;
+    bottom: 8px;
+    right: 10px;
+  }
+
+  .end_copy {
+    display: block;
+    text-align: left;
+    font-weight: 700;
+  }
+
+  .offer_details_copy {
+    font-size: 50%;
+    display: block;
+    text-align: left;
+    padding-top: 2.5%;
+  }
+
+  .end_price {
+    padding-top: 2.5%;
+    font-size: 100%;
+    display: block;
+    text-align: left;
+    font-weight: 700;
+  }
+
+  /* cta */
+
+  #cta_wrapper {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: right;
+  }
+
+  #cta {
+    text-align: center;
+    background-color: #fff;
+    color: #EDBEEA;
+    border-radius: 25px;
+    opacity: 1;
+    font-size: 64%;
+    line-height: 1em;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 8px 15px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  #cta span {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  #scrollbar-container {
+    width: 187px;
+    height: 101%;
+    position: absolute;
+    bottom: 0px;
+    overflow: hidden;
+    background: transparent;
+    padding: 10px 0;
+    box-sizing: border-box;
+    z-index: 1;
+    right: 90px;
+  }
+
+  .ss-scroll {
+    width: 6px;
+  }
+
+  #content-container {
+    width: 97%;
+    padding: 0px 12px;
+    font-size: 9px;
+    line-height: 12px;
+    box-sizing: border-box;
+  }
+
+  .on {
+    opacity: 1;
+  }
+
+  .off {
+    opacity: 0.5;
+  }
+
+  .visible {
+    display: block;
+  }
+
+  .invisible {
+    display: none;
+  }
+
+  .hDPI {
+    background-size: cover;
+  }
+
+  /*scrollbar*/
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #01acee;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white;
+  }
+
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: #8d8484;
+  }
+
+  .hovered {
+    opacity: 0.8 !important;
+  }
+
+  .textStyle_b {
+    color: white;
+    font-size: 90%;
+    line-height: 1.2em;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  .bannerSize {
+    width: 728px;
+    height: 90px;
+  }
+
+  .zIndex {
+    z-index: 99;
+  }
+
+  .rotateScale {
+    transform: rotate(-26deg) scale(3, 3);
+    transform-origin: 50% 50%;
+  }
+
+  .scaleIn {
+    transform: scale(3, 3);
+    transform-origin: 50% 50%;
+  }
+
+  .slideIn {
+    transform: scale(3, 3);
+    opacity: 0;
+    transform-origin: 50% 50%;
+  }
+
+  #fontRoboto {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #fontRaleway {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  #fontMontserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .horizontal_hide {
+    display: none;
+  }
+}</style>
+      <style>@media screen and (max-width: 975px) and (max-height: 255px) and (min-width: 865px) and (min-height: 245px) {
+  img {
+    width: 100%;
+  }
+
+  #banner {
+    width: 970px;
+    height: 250px;
+    background-color: #EDBEEA;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  #outlineBorder {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: transparent;
+    color: #ffff;
+  }
+
+  #outlineBorderEndframe {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background-color: transparent;
+    color: #6a6a6a;
+  }
+
+  .outline-border {
+    opacity: 1;
+    display: block;
+    position: absolute;
+  }
+
+  #copy_box {
+    width: 66%;
+    left: 610px;
+  }
+
+
+  .image-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 585px;
+    height: 250px;
+    overflow: hidden;
+  }
+
+  #bkg1 img{
+    width: 585px;
+    height: 250px;
+  }
+
+  #bkg2 img{
+    width: 585px;
+    height: 250px;
+  }
+
+  .image-container img{
+    width: 585px;
+    height: 250px;
+  }
+
+  .logo_container {
+    width: auto;
+    height: 52px;
+    position: absolute;
+    right: 2%;
+    top: 73%;
+    max-width: 100px;
+  }
+
+  #logo_pink {
+    padding-top: 2px;
+    height: 100%;
+    width: auto;
+    text-align: center;
+    margin: auto;
+  }
+
+  #logo_pink img {
+    /* width: 90px; */
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .into-copy-container {
+    width: 52%;
+    height: 52%;
+    position: absolute;
+    top: 25px;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .copy-container {
+    width: 92%;
+    height: 92%;
+    position: absolute;
+    top: 4%;
+    left: 4%;
+  }
+
+  .copy {
+    font-size: 1.75em;
+  }
+
+  #copy_3_content {
+    width: 100%;
+    height: 100%;
+    padding-top: 1%;
+    padding-left: 1%;
+  }
+
+  .copy_headline,
+  .copy_secondary {
+    font-size: 100%;
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    line-height: 1.15em;
+  }
+
+  .end_frame_container {
+    width: 88%;
+    height: 82%;
+  }
+
+  .end_frame_container {
+    width: 585px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #A345BC;
+  }
+
+  #copy_3 {
+    font-size: 184%;
+    width: 100%;
+    height: auto;
+  }
+
+  #copy_4 {
+    width: 100%;
+    height: auto;
+    padding-top: 3%;
+  }
+
+  #copy_5 {
+    width: 100%;
+  }
+
+  #copyContainer {
+    width: 92%;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .end_copy {
+    display: block;
+    text-align: left;
+    font-weight: 700;
+    line-height: 1.15em;
+  }
+
+  .offer_details_copy {
+    font-size: 54%;
+    display: block;
+    text-align: left;
+  }
+
+  .end_price {
+    padding-top: 3%;
+    font-size: 145%;
+    display: block;
+    text-align: left;
+    font-weight: 700;
+  }
+
+  /* cta */
+
+  #cta_wrapper {
+    display: block;
+    padding-top: 2%;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-align: right;
+  }
+
+  #cta {
+    text-align: center;
+    background-color: #fff;
+    color: #EDBEEA;
+    border-radius: 25px;
+    opacity: 1;
+    font-size: 85%;
+    line-height: 1em;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 12px 24px;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  #cta span {
+    font-size: inherit;
+    line-height: inherit;
+  }
+
+  #scrollbar-container {
+    width: 36%;
+    height: 60%;
+    position: absolute;
+    bottom: 90px;
+    overflow: hidden;
+    background: transparent;
+    padding: 7px 0;
+    box-sizing: border-box;
+    z-index: 1;
+    right: 2%;
+  }
+
+  .ss-scroll {
+    width: 9px;
+  }
+
+  #content-container {
+    width: 87%;
+    padding: 4px 10px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .on {
+    opacity: 1;
+  }
+
+  .off {
+    opacity: 0.5;
+  }
+
+  .visible {
+    display: block;
+  }
+
+  .invisible {
+    display: none;
+  }
+
+  .hDPI {
+    background-size: cover;
+  }
+
+  /*scrollbar*/
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #01acee;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: white;
+  }
+
+  ::-webkit-scrollbar-thumb:window-inactive {
+    background: #8d8484;
+  }
+
+  .hovered {
+    opacity: 0.8 !important;
+  }
+
+  .textStyle_b {
+    color: white;
+    font-size: 90%;
+    line-height: 1.2em;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  .bannerSize {
+    width: 728px;
+    height: 90px;
+  }
+
+  .zIndex {
+    z-index: 99;
+  }
+
+  .rotateScale {
+    transform: rotate(-26deg) scale(3, 3);
+    transform-origin: 50% 50%;
+  }
+
+  .scaleIn {
+    transform: scale(3, 3);
+    transform-origin: 50% 50%;
+  }
+
+  .slideIn {
+    transform: scale(3, 3);
+    opacity: 0;
+    transform-origin: 50% 50%;
+  }
+
+  #fontRoboto {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #fontRaleway {
+    font-family: 'Raleway', sans-serif;
+  }
+
+  #fontMontserrat {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .horizontal_hide {
+    display: none;
+  }
+}</style>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+      <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&amp;family=Raleway:wght@200;300;400;500;600;800;900&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&amp;family=Raleway:wght@200;300;400;500;600;800;900&amp;family=Roboto&amp;display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&amp;family=Nunito+Sans:wght@300&amp;family=Raleway:wght@200;300;400;500;600;800;900&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&amp;family=Nunito+Sans:wght@300&amp;family=Oswald:wght@400;500;700&amp;family=Raleway:wght@200;300;400;500;600;800;900&amp;family=Roboto:wght@400;500;700&amp;display=swap" rel="stylesheet">
+
+      <!-- Greensock -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+         <script type="text/javascript" src="1dfdba59-c415-eeef-49d6-3a054c210094.js"></script>
+
+      <!-- ClickTag value setup/fallback -->
+      <script type="text/javascript">
+         /* Main Link*/
+         var clickTag = "";
+      </script>
+      
+      <title>AdZu Holiday</title>
+
+   </head>
+   <body>
+      <div id="banner" class="hide" style="background-color: rgb(255, 90, 24);">
+         <span style="display:none;">customisation_name</span>
+
+          <!-- Images -->
+           <div id="image_1" class="image-container">
+            <div id="bkg1">
+               <img src="7a2780f2-79d1-4869-aeb3-57e1e7f3c776.jpg" alt="">
+            </div>
+          </div>
+
+          <div id="image_2" class="image-container">
+            <div id="bkg2">
+               <img src="20963708-98f1-48a9-ae95-9eac72db37d9.jpeg">
+            </div>
+         </div>
+          <!-- Images-->
+
+         <!-- fonts -->
+         <div id="fontRoboto" class="font_replace"></div>
+
+         <div id="fontRaleway" class="font_replace"></div>
+
+         <div id="fontMontserrat" class="font_replace"></div>
+
+         <div id="fontOswald" class="font_replace"></div>
+         <!-- fonts -->
+
+         <div id="copy_box" class="copy_box">
+            <!-- Destination Headline -->
+            <div id="copy_1" class="into-copy-container copy hide">
+               <span class="font_replace medium_text copy_headline" style="font-family: 'Raleway', sans-serif; color: rgb(255, 255, 255);">There is no place like Dubai</span>
+            </div>
+
+            <!-- Experience Headline -->
+            <div id="copy_2" class="into-copy-container copy hide">
+               <span class="font_replace medium_text copy_secondary" style="font-family: 'Raleway', sans-serif; color: rgb(255, 255, 255);"> And experience the thrill of skydiving for yourself!</span>
+            </div>
+         </div>
+         
+
+         <!-- Logos -->
+         <div class="logo_container">
+            <div id="logo_pink" class="hide">
+               <img src="b346be6a-029d-435b-9154-6f3ed4d6a3ec.png" alt="">
+            </div>
+         </div>
+
+         
+         <!-- End Frame -->
+
+         <div id="end_frame_container" class="end_frame_container" style="background-color: rgb(255, 255, 255);">
+
+            <!-- End Title Copy -->
+            <div id="copy_3_content">
+               <div id="copy_3" class="copy">
+                  <span class="font_replace medium_text end_copy" style="font-family: 'Raleway', sans-serif; color: rgb(99, 99, 99);">Luxury 5* 7-night stay with thrilling skydive</span>
+               </div>
+
+               <!-- Offer Details -->
+               <div id="copy_4" class="copy width_100">
+                  <span class="font_replace small_text offer_details_copy" style="font-family: 'Raleway', sans-serif; color: rgb(99, 99, 99);">Flights from London Stansted </span>
+               </div>
+
+                <!-- Price -->
+               <div id="copy_5" class="copy hide width_100">
+                  <span id="price_span" class="font_replace medium_text end_price" style="font-family: 'Raleway', sans-serif; color: rgb(99, 99, 99);">£1,599</span>
+               </div>
+            </div>
+
+            <div id="copyContainer">
+               <!-- CTA -->
+               <div id="cta_wrapper" class="hide">
+                  <div id="cta" class="font_replace secondary_text" style="background-color: rgb(255, 90, 24);">
+                     <span style="font-family: 'Raleway', sans-serif; color: rgb(255, 255, 255);">Visit Dubai</span>
+                  </div>
+               </div>
+            </div>
+
+       
+         <!-- End Frame -->
+ 
+    
+      </div>
+       <div id="scrollbar-container">
+               <div id="content-container" style="font-family: 'Raleway', sans-serif; color: rgb(255, 255, 255);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra lectus arcu, nec tincidunt
+                  sapien cursus sed. Fusce nec tortor eget neque bibendum gravida. Curabitur id convallis nunc, ut egestas
+                  est. Praesent mollis fermentum mattis. Praesent quis justo suscipit, sagittis massa non, ornare diam.
+                  Nunc auctor libero in urna volutpat, et ornare ante tempor. Mauris feugiat lacus sit amet vestibulum
+                  fringilla. Nunc mi libero, posuere non convallis a, pretium gravida magna. Suspendisse consequat orci
+                  placerat nibh convallis, at pulvinar augue vulputate. Morbi aliquet ultrices orci in tempor. Nulla
+                  ornare, ante quis sodales blandit, nisl nibh ultrices ex, at sollicitudin nunc mi vitae sapien. Etiam a
+                  imperdiet neque. Pellentesque vulputate efficitur auctor.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra lectus arcu, nec tincidunt
+                  sapien cursus sed. Fusce nec tortor eget neque bibendum gravida. Curabitur id convallis nunc, ut egestas
+                  est. Praesent mollis fermentum mattis. Praesent quis justo suscipit, sagittis massa non, ornare diam.
+                  Nunc auctor libero in urna volutpat, et ornare ante tempor. Mauris feugiat lacus sit amet vestibulum
+                  fringilla. Nunc mi libero, posuere non convallis a, pretium gravida magna. Suspendisse consequat orci
+                  placerat nibh convallis, at pulvinar augue vulputate. Morbi aliquet ultrices orci in tempor. Nulla
+                  ornare, ante quis sodales blandit, nisl nibh ultrices ex, at sollicitudin nunc mi vitae sapien. Etiam a
+                  imperdiet neque. Pellentesque vulputate efficitur auctor.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse viverra lectus arcu, nec tincidunt
+                  sapien cursus sed. Fusce nec tortor eget neque bibendum gravida. Curabitur id convallis nunc, ut egestas
+                  est. Praesent mollis fermentum mattis. Praesent quis justo suscipit, sagittis massa non, ornare diam.
+                  Nunc auctor libero in urna volutpat, et ornare ante tempor. Mauris feugiat lacus sit amet vestibulum
+                  fringilla. Nunc mi libero, posuere non convallis a, pretium gravida magna. Suspendisse consequat orci
+                  placerat nibh convallis, at pulvinar augue vulputate. Morbi aliquet ultrices orci in tempor. Nulla
+                  ornare, ante quis sodales blandit, nisl nibh ultrices ex, at sollicitudin nunc mi vitae sapien. Etiam a
+                  imperdiet neque. Pellentesque vulputate efficitur auctor.</div>
+         </div>
+      <!-- BANNER CONTAINER -->
+
+         <!-- Exit Link -->
+         <!-- <div id="exit_link"></div> -->
+   
+   
+  
+   
+   <script src="23aaecb8-727f-86ba-ef85-3a054c2100c3.js"></script>
+   
+   <!-- GLOBAL JS VARS -->
+   <script type="text/javascript">
+      var globalTimeline = {
+      delay: 0,
+      repeat: 0,
+      repeatDelay: 0,
+      }
+      
+      var element = {
+          banner: document.getElementById('banner'),
+          outlineBorder: document.getElementById('outlineBorder'),
+          outlineBorderEndframe: document.getElementById('outlineBorderEndframe'),
+          bkg1: document.getElementById('bkg1'),
+          bkg2: document.getElementById('bkg2'),
+          copy_1: document.getElementById('copy_1'),
+          copy_2: document.getElementById('copy_2'),
+          copy_3: document.getElementById('copy_3'),
+          copy_4: document.getElementById('copy_4'),
+          copy_5: document.getElementById('copy_5'),
+          copy: document.getElementsByClassName('copy'),
+          copy_secondary_class: document.getElementsByClassName('copy_secondary'),
+          copy_3_content: document.getElementById('copy_3_content'),
+          copy_5_content: document.getElementById('copy_5_content'),
+          logo_pink: document.getElementById('logo_pink'),
+          // exit_link: document.getElementById('exit_link'),
+          price_span: document.getElementById('price_span'),
+          cta: document.getElementById('cta'),
+          cta_wrapper: document.getElementById('cta_wrapper'),
+          end_frame_container: document.getElementById('end_frame_container'),
+          scrollbar: document.getElementById('scrollbar-container'),
+
+          fontRoboto: document.getElementById('fontRoboto'),
+          fontRaleway: document.getElementById('fontRaleway'),
+          fontMontserrat: document.getElementById('fontMontserrat'),
+          fontOswald: document.getElementById('fontOswald'),
+          font_replace: document.getElementsByClassName('font_replace'),
+        }
+      
+
+  
+          
+   </script>
+   <!-- Animation Breakpoints -->
+   
+   <script type="text/javascript">function animation_160x600() {
+
+
+  //Endframe
+  function endFrame() {
+    console.log('endFrame()');
+  }
+
+  //Greensock Timeline
+  var tl = gsap.timeline({delay:0, repeat: -1, repeatDelay: 0, onComplete: endFrame});
+
+
+  tl.addLabel("start")
+    .to(element.banner, 0, { opacity: 1 }, "start")
+    .set(element.bkg1, { opacity: 0, x: 0, y: 0, scale: 1.8 }, 0)
+    .set(element.bkg2, { opacity: 0, x: 0, y: 0, scale: 1.8 }, 0)
+    .set(element.scrollbar, { opacity: 0, x: -300 }, 0)
+    .set(element.logo_pink, { opacity: 0, scale: 1 }, 0)
+    .set(element.logo_white, { opacity: 0, scale: 1 }, 0)
+    .set(element.copy_1, { opacity: 0, scale: 1, x: -200, y: 0, }, 0)
+    .set(element.copy_2, { opacity: 0, scale: 1, x: -200, y: 0, }, 0)
+    .set(element.end_frame_container, { opacity: 0, x: 0 }, 0)
+    .set([element.copy_3_content, element.copy_5, element.bottom_Txt], { opacity: 0, x: -300, y: 0, }, 0)
+    .set(element.cta_wrapper, { opacity: 0, x: 0, y: 0, }, 0)
+
+
+
+  // Frame 1
+  tl.addLabel("phase_1", "")
+    .to(element.bkg1, 1, { opacity: 1, x: 0, y: 0, scale: 1, ease: Power1.easeOut }, "phase_1")
+    .to(element.copy_1, 1, { opacity: 1, x: 0, ease: Power4.easeOut }, 'phase_1')
+    .to(element.logo_pink, 0.5, { opacity: 1, ease: Power2.easeIn }, 'phase_1')
+
+  // Frame 2
+
+  tl.addLabel("phase_2", "+=2")
+    .to([element.bkg1, element.copy_1], 0, { opacity: 0 }, 'phase_2')
+    .to(element.bkg2, 1, { opacity: 1, x: 0, y: 0, scale: 1, ease: Power1.easeOut }, "phase_2")
+    .to(element.copy_2, 1.5, { opacity: 1, x: 0, ease: Power3.easeOut }, 'phase_2')
+
+
+  // Frame 3
+
+  tl.addLabel("phase_3", "+=2")
+    .to([element.bkg2, element.copy_2], 0, { opacity: 0, ease: Power2.ease }, 'phase_3')
+    .to(element.end_frame_container, 0.1, { opacity: 1, ease: Power2.ease }, 'phase_3')
+    .to([element.copy_3_content, element.copy_5], 1, { opacity: 1, x: 0, ease: Power2.easeOut }, 'phase_3+=0.5')
+    .to(element.cta_wrapper, 1, { opacity: 1, x: 0, ease: "MB" }, 'phase_3+=1.5')
+    .to(element.scrollbar, 2, { opacity: 1, x: 0, ease: Power4.easeInOut }, 'phase_3+=0.5')
+
+
+    .add( function(){
+      if (cycle == tl.repeat()) {
+        console.log('end of cycle. pausing on endframe');
+        tl.pause()
+      }else{
+        cycle++
+      }
+    })
+
+    tl.addLabel("reset","+=1")
+
+    .to(element.banner, 0, { opacity: 1 },"reset+=1.4")
+    .to(element.bkg1, { opacity: 1, scale:1.2,},"reset+=1.4")
+    .to(element.bkg2, { opacity: 1},"reset+=1.4")
+    .to(element.logo_pink, { opacity: 1},"reset+=1.4")
+    .to(element.copy_1, { opacity: 0},"reset+=1.4")
+    .to(element.copy_2, { opacity: 0},"reset+=1.4")
+    .to(element.copy_3, { opacity: 1},"reset+=1.4")
+    .to(element.cta_wrapper, {opacity: 1 } ,"reset+=1.4" )
+    .to(element.full_gradient, { opacity: 1},"reset+=1.4")
+    .to(element.full_gradient_2, { opacity: 1},"reset+=1.4")
+
+  }
+
+
+</script>
+   <script type="text/javascript">function animation_300x250() {
+
+  //Endframe
+  function endFrame() {
+    console.log('endFrame()');
+  }
+
+  //Greensock Timeline
+  var tl = gsap.timeline({delay:0, repeat: -1, repeatDelay: 0, onComplete: endFrame});
+
+
+  tl.addLabel("start")
+    .to(element.banner, 0, { opacity: 1 }, "start")
+    .set(element.bkg1, { opacity: 0, x: 0, y: 0, scale: 1.8 }, 0)
+    .set(element.bkg2, { opacity: 0, x: 0, y: 0, scale: 1.8 }, 0)
+    .set(element.scrollbar, { opacity: 0, x: -300 }, 0)
+    .set(element.logo_pink, { opacity: 0, scale: 1 }, 0)
+    .set(element.logo_white, { opacity: 0, scale: 1 }, 0)
+    .set(element.copy_1, { opacity: 0, scale: 1, x: -200, y: 0, }, 0)
+    .set(element.copy_2, { opacity: 0, scale: 1, x: -200, y: 0, }, 0)
+    .set(element.end_frame_container, { opacity: 0, x: 0 }, 0)
+    .set([element.copy_3_content, element.copy_5, element.bottom_Txt], { opacity: 0, x: -300, y: 0, }, 0)
+    .set(element.cta_wrapper, { opacity: 0, x: 0, y: 0, }, 0)
+
+
+
+  // Frame 1
+  tl.addLabel("phase_1", "")
+    .to(element.bkg1, 1, { opacity: 1, x: 0, y: 0, scale: 1, ease: Power1.easeOut }, "phase_1")
+    .to(element.copy_1, 1, { opacity: 1, x: 0, ease: Power4.easeOut }, 'phase_1')
+    .to(element.logo_pink, 0.5, { opacity: 1, ease: Power2.easeIn }, 'phase_1')
+
+  // Frame 2
+
+  tl.addLabel("phase_2", "+=2")
+    .to([element.bkg1, element.copy_1], 0, { opacity: 0 }, 'phase_2')
+    .to(element.bkg2, 1, { opacity: 1, x: 0, y: 0, scale: 1, ease: Power1.easeOut }, "phase_2")
+    .to(element.copy_2, 1.5, { opacity: 1, x: 0, ease: Power3.easeOut }, 'phase_2')
+
+
+  // // // Frame 3
+
+  tl.addLabel("phase_3", "+=2")
+    .to([element.bkg2, element.copy_2], 0, { opacity: 0, ease: Power2.ease }, 'phase_3')
+    .to(element.end_frame_container, 0.1, { opacity: 1, ease: Power2.ease }, 'phase_3')
+    .to([element.copy_3_content, element.copy_5], 1, { opacity: 1, x: 0, ease: Power2.easeOut }, 'phase_3+=0.5')
+    .to(element.cta_wrapper, 1, { opacity: 1, x: 0, ease: "MB" }, 'phase_3+=1.5')
+    .to(element.scrollbar, 2, { opacity: 1, x: 0, ease: Power4.easeInOut }, 'phase_3+=0.5')
+
+
+
+    .add( function(){
+      if (cycle == tl.repeat()) {
+        console.log('end of cycle. pausing on endframe');
+        tl.pause()
+      }else{
+        cycle++
+      }
+    })
+
+    tl.addLabel("reset","+=1")
+
+    .to(element.banner, 0, { opacity: 1 },"reset+=1.4")
+    .to(element.bkg1, { opacity: 1, scale:1.2,},"reset+=1.4")
+    .to(element.bkg2, { opacity: 1},"reset+=1.4")
+    .to(element.logo_pink, { opacity: 1},"reset+=1.4")
+    .to(element.copy_1, { opacity: 0},"reset+=1.4")
+    .to(element.copy_2, { opacity: 0},"reset+=1.4")
+    .to(element.copy_3, { opacity: 1},"reset+=1.4")
+    .to(element.cta_wrapper, {opacity: 1 } ,"reset+=1.4" )
+    .to(element.full_gradient, { opacity: 1},"reset+=1.4")
+    .to(element.full_gradient_2, { opacity: 1},"reset+=1.4")
+
+  }
+</script>
+   <script type="text/javascript">function animation_300x600() {
+
+  //Endframe
+  function endFrame() {
+    console.log('endFrame()');
+  }
+
+  //Greensock Timeline
+  var tl = gsap.timeline({delay:0, repeat: -1, repeatDelay: 0, onComplete: endFrame});
+
+
+  tl.addLabel("start")
+    .to(element.banner, 0, { opacity: 1 }, "start")
+    .set(element.bkg1, { opacity: 0, x: 0, y: 0, scale: 1.8 }, 0)
+    .set(element.bkg2, { opacity: 0, x: 0, y: 0, scale: 1.8 }, 0)
+    .set(element.scrollbar, { opacity: 0, x: -300 }, 0)
+    .set(element.logo_pink, { opacity: 0, scale: 1 }, 0)
+    .set(element.logo_white, { opacity: 0, scale: 1 }, 0)
+    .set(element.copy_1, { opacity: 0, scale: 1, x: -200, y: 0, }, 0)
+    .set(element.copy_2, { opacity: 0, scale: 1, x: -200, y: 0, }, 0)
+    .set(element.end_frame_container, { opacity: 0, x: 0 }, 0)
+    .set([element.copy_3_content, element.copy_5, element.bottom_Txt], { opacity: 0, x: -300, y: 0, }, 0)
+    .set(element.cta_wrapper, { opacity: 0, x: 0, y: 0, }, 0)
+
+
+
+  // Frame 1
+  tl.addLabel("phase_1", "")
+    .to(element.bkg1, 1, { opacity: 1, x: 0, y: 0, scale: 1, ease: Power1.easeOut }, "phase_1")
+    .to(element.copy_1, 1, { opacity: 1, x: 0, ease: Power4.easeOut }, 'phase_1')
+    .to(element.logo_pink, 0.5, { opacity: 1, ease: Power2.easeIn }, 'phase_1')
+
+  // Frame 2
+
+  tl.addLabel("phase_2", "+=2")
+    .to([element.bkg1, element.copy_1], 0, { opacity: 0 }, 'phase_2')
+    .to(element.bkg2, 1, { opacity: 1, x: 0, y: 0, scale: 1, ease: Power1.easeOut }, "phase_2")
+    .to(element.copy_2, 1.5, { opacity: 1, x: 0, ease: Power3.easeOut }, 'phase_2')
+
+
+  // Frame 3
+
+  tl.addLabel("phase_3", "+=2")
+    .to([element.bkg2, element.copy_2], 0, { opacity: 0, ease: Power2.ease }, 'phase_3')
+    .to(element.end_frame_container, 0.1, { opacity: 1, ease: Power2.ease }, 'phase_3')
+    .to([element.copy_3_content, element.copy_5], 1, { opacity: 1, x: 0, ease: Power2.easeOut }, 'phase_3+=0.5')
+    .to(element.cta_wrapper, 1, { opacity: 1, x: 0, ease: "MB" }, 'phase_3+=1.5')
+    .to(element.scrollbar, 2, { opacity: 1, x: 0, ease: Power4.easeInOut }, 'phase_3+=0.5')
+
+
+    .add( function(){
+      if (cycle == tl.repeat()) {
+        console.log('end of cycle. pausing on endframe');
+        tl.pause()
+      }else{
+        cycle++
+      }
+    })
+
+    tl.addLabel("reset","+=1")
+
+    .to(element.banner, 0, { opacity: 1 },"reset+=1.4")
+    .to(element.bkg1, { opacity: 1, scale:1.2,},"reset+=1.4")
+    .to(element.bkg2, { opacity: 1},"reset+=1.4")
+    .to(element.logo_pink, { opacity: 1},"reset+=1.4")
+    .to(element.copy_1, { opacity: 0},"reset+=1.4")
+    .to(element.copy_2, { opacity: 0},"reset+=1.4")
+    .to(element.copy_3, { opacity: 1},"reset+=1.4")
+    .to(element.cta_wrapper, {opacity: 1 } ,"reset+=1.4" )
+    .to(element.full_gradient, { opacity: 1},"reset+=1.4")
+    .to(element.full_gradient_2, { opacity: 1},"reset+=1.4")
+
+  }
+</script>
+   <script type="text/javascript">function animation_728x90() {
+
+  //Endframe
+  function endFrame() {
+    console.log('endFrame()');
+  }
+
+  //Greensock Timeline
+  var tl = gsap.timeline({delay:0, repeat: -1, repeatDelay: 0, onComplete: endFrame});
+
+
+  tl.addLabel("start")
+    .to(element.banner, 0, { opacity: 1 }, "start")
+    .set(element.bkg1, { opacity: 0, x: 0, y: 0, scale: 1.8 }, 0)
+    .set(element.bkg2, { opacity: 0, x: 0, y: 0, scale: 1.8 }, 0)
+    .set(element.scrollbar, { opacity: 0, x: 300 }, 0)
+    .set(element.logo_pink, { opacity: 0, scale: 1 }, 0)
+    .set(element.logo_white, { opacity: 0, scale: 1 }, 0)
+    .set(element.copy_1, { opacity: 0, scale: 1, x: 300, y: 0, }, 0)
+    .set(element.copy_2, { opacity: 0, scale: 1, x: 300, y: 0, }, 0)
+    .set(element.end_frame_container, { opacity: 0, x: 0 }, 0)
+    .set([element.copy_3_content, element.copy_5, element.bottom_Txt], { opacity: 0, x: -300, y: 0, }, 0)
+    .set(element.cta_wrapper, { opacity: 0, x: 0, y: 0, }, 0)
+
+
+
+  // Frame 1
+  tl.addLabel("phase_1", "")
+    .to(element.bkg1, 1, { opacity: 1, x: 0, y: 0, scale: 1, ease: Power1.easeOut }, "phase_1")
+    .to(element.copy_1, 1, { opacity: 1, x: 0, ease: Power4.easeOut }, 'phase_1')
+    .to(element.logo_pink, 0.5, { opacity: 1, ease: Power2.easeIn }, 'phase_1')
+
+  // Frame 2
+
+  tl.addLabel("phase_2", "+=2")
+    .to([element.bkg1, element.copy_1], 0, { opacity: 0 }, 'phase_2')
+    .to(element.bkg2, 1, { opacity: 1, x: 0, y: 0, scale: 1, ease: Power1.easeOut }, "phase_2")
+    .to(element.copy_2, 1.5, { opacity: 1, x: 0, ease: Power3.easeOut }, 'phase_2')
+
+
+  // // Frame 3
+
+  tl.addLabel("phase_3", "+=2")
+    .to([element.bkg2, element.copy_2], 0, { opacity: 0, ease: Power2.ease }, 'phase_3')
+    .to(element.logo_pink, 0, { opacity: 0, x: 277 }, 'phase_3')
+    .to([element.end_frame_container, element.logo_pink], 0.1, { opacity: 1, ease: Power2.ease }, 'phase_3')
+    .to([element.copy_3_content, element.copy_5], 1, { opacity: 1, x: 0, ease: Power2.easeOut }, 'phase_3+=0.5')
+    .to(element.cta_wrapper, 1, { opacity: 1, x: 0, ease: "MB" }, 'phase_3+=1.5')
+    .to(element.scrollbar, 2, { opacity: 1, x: 0, ease: Power4.easeInOut }, 'phase_3+=0.5')
+
+
+    .add( function(){
+      if (cycle == tl.repeat()) {
+        console.log('end of cycle. pausing on endframe');
+        tl.pause()
+      }else{
+        cycle++
+      }
+    })
+
+    tl.addLabel("reset","+=1")
+
+    .to(element.banner, 0, { opacity: 1 },"reset+=1.4")
+    .to(element.bkg1, { opacity: 0, scale:1.2,},"reset+=1.4")
+    .to(element.bkg2, { opacity: 0},"reset+=1.4")
+    .to(element.logo_pink, { opacity: 1},"reset+=1.4")
+    .to(element.copy_1, { opacity: 0},"reset+=1.4")
+    .to(element.copy_2, { opacity: 0},"reset+=1.4")
+    .to(element.copy_3, { opacity: 1},"reset+=1.4")
+    .to(element.cta_wrapper, {opacity: 1 } ,"reset+=1.4" )
+    .to(element.full_gradient, { opacity: 1},"reset+=1.4")
+    .to(element.full_gradient_2, { opacity: 1},"reset+=1.4")
+
+  }
+</script>
+   <script type="text/javascript">function animation_970x250() {
+
+  //Endframe
+  function endFrame() {
+    console.log('endFrame()');
+  }
+
+  //Greensock Timeline
+  var tl = gsap.timeline({delay:0, repeat: -1, repeatDelay: 0, onComplete: endFrame});
+
+  tl.addLabel("start")
+    .to(element.banner, 0, { opacity: 1 }, "start")
+    .set(element.bkg1, { opacity: 0, x: 0, y: 0, scale: 1.8 }, 0)
+    .set(element.bkg2, { opacity: 0, x: 0, y: 0, scale: 1.8 }, 0)
+    .set(element.scrollbar, { opacity: 0, x: 300 }, 0)
+    .set(element.logo_pink, { opacity: 0, scale: 1 }, 0)
+    .set(element.logo_white, { opacity: 0, scale: 1 }, 0)
+    .set(element.copy_1, { opacity: 0, scale: 1, x: 300, y: 0, }, 0)
+    .set(element.copy_2, { opacity: 0, scale: 1, x: 300, y: 0, }, 0)
+    .set(element.end_frame_container, { opacity: 0, x: 0 }, 0)
+    .set([element.copy_3_content, element.copy_5, element.bottom_Txt], { opacity: 0, x: -300, y: 0, }, 0)
+    .set(element.cta_wrapper, { opacity: 0, x: 0, y: 0, }, 0)
+
+
+
+  // Frame 1
+  tl.addLabel("phase_1", "")
+    .to(element.bkg1, 1, { opacity: 1, x: 0, y: 0, scale: 1, ease: Power1.easeOut }, "phase_1")
+    .to(element.copy_1, 1, { opacity: 1, x: 0, ease: Power4.easeOut }, 'phase_1')
+    .to(element.logo_pink, 0.5, { opacity: 1, ease: Power2.easeIn }, 'phase_1')
+
+  // Frame 2
+
+  tl.addLabel("phase_2", "+=2")
+    .to([element.bkg1, element.copy_1], 0, { opacity: 0 }, 'phase_2')
+    .to(element.bkg2, 1, { opacity: 1, x: 0, y: 0, scale: 1, ease: Power1.easeOut }, "phase_2")
+    .to(element.copy_2, 1.5, { opacity: 1, x: 0, ease: Power3.easeOut }, 'phase_2')
+
+
+  // Frame 3
+
+  tl.addLabel("phase_3", "+=2")
+    .to([element.bkg2, element.copy_2], 0, { opacity: 0, ease: Power2.ease }, 'phase_3')
+    .to(element.end_frame_container, 0.1, { opacity: 1, ease: Power2.ease }, 'phase_3')
+    .to([element.copy_3_content, element.copy_5], 1, { opacity: 1, x: 0, ease: Power2.easeOut }, 'phase_3+=0.5')
+    .to(element.cta_wrapper, 1, { opacity: 1, x: 0, ease: "MB" }, 'phase_3+=1.5')
+    .to(element.scrollbar, 2, { opacity: 1, x: 0, ease: Power4.easeInOut }, 'phase_3+=0.5')
+
+
+
+    .add( function(){
+      if (cycle == tl.repeat()) {
+        console.log('end of cycle. pausing on endframe');
+        tl.pause()
+      }else{
+        cycle++
+      }
+    })
+
+    tl.addLabel("reset","+=1")
+
+    .to(element.banner, 0, { opacity: 1 },"reset+=1.4")
+    .to(element.bkg1, { opacity: 1, scale:1.2,},"reset+=1.4")
+    .to(element.bkg2, { opacity: 1},"reset+=1.4")
+    .to(element.logo_pink, { opacity: 1},"reset+=1.4")
+    .to(element.copy_1, { opacity: 0},"reset+=1.4")
+    .to(element.copy_2, { opacity: 0},"reset+=1.4")
+    .to(element.copy_3, { opacity: 1},"reset+=1.4")
+    .to(element.cta_wrapper, {opacity: 1 } ,"reset+=1.4" )
+    .to(element.full_gradient, { opacity: 1},"reset+=1.4")
+    .to(element.full_gradient_2, { opacity: 1},"reset+=1.4")
+
+  }
+</script>
+   
+   <!-- INIT -->
+   <script type="text/javascript">
+      ////////////
+      /// VARS ///
+      ////////////
+      
+      function init() {
+      
+       
+      
+        /////////////////////////////////////////////////////////
+        /// GET THE BANNER SIZE TO LOAD THE CORRECT ANIMATION ///
+        /////////////////////////////////////////////////////////
+      
+        var bannerSize = {
+          w: window.innerWidth,
+          h: window.innerHeight
+        }
+      
+        if (bannerSize.w == 160 && bannerSize.h == 600) {
+         console.log('THIS IS 160x600');
+         animation_160x600()
+
+      } else if (bannerSize.w == 300 && bannerSize.h == 250) {
+         console.log('THIS IS 300x250');
+         animation_300x250()
+
+      } else if (bannerSize.w == 300 && bannerSize.h == 600) {
+         console.log('THIS IS 300x600');
+         animation_300x600()
+
+      } else if (bannerSize.w == 728 && bannerSize.h == 90) {
+         console.log('THIS IS 728x90');
+         animation_728x90()
+
+      } else if (bannerSize.w == 970 && bannerSize.h == 250) {
+         console.log('THIS IS 970x250');
+         animation_970x250()
+      }
+
+       ////////////////////
+        /// ScrollBar Call ///
+        ////////////////////
+
+      var el = document.getElementById('scrollbar-container');
+      SimpleScrollbar.initEl(el);
+
+      /*If price default value is not 0,000 then the banner background 
+            will be changed to blue  & cta background will be green*/
+      // if(element.price_span.innerHTML !== '£0,000'){
+      //    console.log(element.price_span.innerHTML);
+      //    element.banner.style.backgroundColor = "#FF5A18";
+      //    element.end_frame_container.style.backgroundColor = "#250038";
+      //    element.cta.style.backgroundColor = "#FFFFFF";
+      //    element.cta.style.color = "#FF5A18";
+      //    element.scrollbar.style.color = "#FFF";
+      // }else{
+      //    return 0;
+      // }
+      
+      ////////////////////
+        /// EXIT HANDLER ///
+        ////////////////////
+      
+        // function exitLink() {
+        //   console.log('exit Clicked')
+        //   window.open(clickTag, "_blank")
+        // }
+        // element.exit_link.addEventListener("click", exitLink); //Desktop
+      
+      
+      }
+      
+      function imageLoader(){
+        console.log('imageLoader()')
+      
+        var imagesLoaded = 0;
+      
+        //Scrape the images from the DOM
+        var images = document.getElementsByTagName('img'); 
+        // console.log(images)
+      
+        //Cycle the array to check images have loaded    
+        for (let index = 0; index < images.length; index++) {
+          const element = images[index];
+          console.log(element);
+          
+      
+          var img = new Image();
+          img.src = element.src;
+          img.onload = function () {
+            console.log("image is loaded");
+            imagesLoaded ++
+            imagesLoadedCheck()
+          }
+      
+          function imagesLoadedCheck(){
+          console.log('imagesLoaded: ' + imagesLoaded + ' / ' + images.length);
+          if (imagesLoaded == images.length) {
+            console.log('ALL IMAGES LOADED');
+            init()
+            }
+          }
+      
+        }
+      }
+      
+      imageLoader()
+      
+   </script>
+</div></body><!-- Text Shrink script if needed --><!-- MB Custom Ease script --></html>
