@@ -1,0 +1,391 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+   RESET CSS
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/************ My CSS *************/
+
+html,
+body {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  font-family: sans-serif, Helvetica, Arial;
+  font-weight: 400;
+  color: #fff;
+}
+
+html,
+.masterSize {
+  width: 300px;
+  height: 250px;
+}
+
+span {
+  display: inline-block;
+}
+
+.textC {
+  text-align: center;
+}
+
+#banner {
+  background: #4d148c;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid #515151;
+  box-sizing: border-box;
+}
+
+.w100 {
+  width: 100%;
+  height: 100%;
+}
+
+.hide {
+  opacity: 0;
+}
+.bold{
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.posAbsolute {
+  position: absolute;
+}
+
+.lt0 {
+  top: 0px;
+  left: 0px;
+}
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+#bgimg{
+  width: 300px;
+  height: 250px;
+}
+#logo{
+  top: 20px;
+  left: 20px;
+}
+#logo img{
+  width: 110px;
+  height: auto;
+}
+#headline1{
+  left: 20px;
+  top: 90px;
+  color: #c21e27;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 23px;
+  width: 120px;
+}
+#headline2{
+  left: 20px;
+  top: 90px;
+  color: #0d2135;
+  font-size: 20px;
+  line-height: 23px;
+  width: 120px;
+  font-weight: bold;
+}
+.red-txt{
+  color: #c21e27;
+}
+.blue-txt{
+  color: #0d2135;
+}
+#full-terms{
+  bottom: 10px;
+  left: 20px;
+  background: none;
+  border: none;
+  font-weight: bold;
+  color: #0d2135;
+  padding: 0px;
+}
+.small-txt{
+  font-size: 12px;
+  line-height: 15px;
+}
+
+
+ /* Popup CSS */
+ .popup {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 250px;
+  border: 1px solid #000;
+  background-color: #000000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  opacity: 0.8;
+}
+/* Close Button CSS*/
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 25px;
+}
+/* Overlay CSS*/
+.overlay {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/*Popup Content style*/
+.popup-content{
+  font-size: 12px;
+  line-height: 15px;
+  padding: 25px 20px 20px 20px;
+}
+
+/* Carousel CSS */
+#side-carousel{
+  position: absolute;
+  left: 140px;
+  top: 0px;
+  height: 250px;
+}
+.carousel {
+  position: relative;
+  width: 160px;
+  height: 250px;
+  overflow: hidden;
+}
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.carousel-item {
+  min-width: 160px;
+  box-sizing: border-box;
+  height: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 55px;
+  left: 65px;
+}
+.carousel-indicators div {
+  width: 7px;
+  height: 7px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+.carousel-indicators .active {
+  background-color: black;
+}
+.carousel-item:nth-child(1) img{
+  width: 45px;
+  position: absolute;
+  top: 40px;
+  padding-left: 20px;
+}
+.carousel-item:nth-child(2) img{
+  width: 120px;
+  position: absolute;
+  top: 60px;
+  padding-left: 20px;
+}
+.carousel-item:nth-child(3) img{
+  width: 60px;
+  position: absolute;
+  top: 40px;
+  padding-left: 20px;
+}
+
+ #price1, #price2, #price3{
+  font-weight: bold;
+  position: absolute;
+  left: 20px;
+  bottom: 40px;
+  color:#c31e27
+}
+.size-incre{
+  font-size: 33px;
+}
+.priceitems {
+  display: none; 
+}
+.priceitems.active {
+  display: block; 
+}
+
+.carousel-item #learn-more1, .carousel-item #learn-more2, .carousel-item #learn-more3{
+  position: absolute;
+  bottom: 15px;
+  left: 25px;
+  background-color: #c31e27;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  width: 120px;
+  text-align: center;
+}
+.carousel-item #learn-more1 a, .carousel-item #learn-more2 a, .carousel-item #learn-more3 a{
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Carousel CSS */
+
+

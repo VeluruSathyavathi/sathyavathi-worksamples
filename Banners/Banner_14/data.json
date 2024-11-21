@@ -1,0 +1,74 @@
+{
+	"Width": 300,
+	"Height": 250,
+
+	"Static_Pause_Time": 1,
+	"OtherSizes": "160x600, 300x250, 300x600, 320x50, 728x90",
+	
+	"DCO_MockTest_BG": {
+		"VariableType": "Image",
+		"Value": "300x250_DCO_MockTest_BG.png",
+		"Metadata": {}
+	},
+	"DCO_MockTest_logo": {
+		"VariableType": "Image",
+		"Value": "300x250_DCO_MockTest_logo.png",
+		"Metadata": {}
+	},
+    "DCO_MockTest_Headline1":{
+        "VariableType": "Text",
+		"Value": "The phones you want at get here",
+		"Metadata": {}
+    },
+    "DCO_MockTest_Headline2":{
+        "VariableType": "Text",
+		"Value": "Free 5G phones with qualified plan purchases",
+		"Metadata": {}
+    },
+    "DCO_MockTest_Price1":{
+        "VariableType": "Text",
+		"Value": "$3 99/month",
+		"Metadata": {}
+    },
+    "DCO_MockTest_Price2":{
+        "VariableType": "Text",
+		"Value": "$4 99/month",
+		"Metadata": {}
+    },
+    "DCO_MockTest_Price3":{
+        "VariableType": "Text",
+		"Value": "$5 99/month",
+		"Metadata": {}
+    },
+	"DCO_MockTest_Carousel01":{
+        "VariableType": "Image",
+		"Value": "300x250_DCO_MockTest_product01.png",
+		"Metadata": {}
+    },
+    "DCO_MockTest_Carousel02":{
+        "VariableType": "Image",
+		"Value": "300x250_DCO_MockTest_product02.png",
+		"Metadata": {}
+    },
+    "DCO_MockTest_Carousel03":{
+        "VariableType": "Image",
+		"Value": "300x250_DCO_MockTest_product03.png",
+		"Metadata": {}
+    },
+    "DCO_MockTest_btn1":{
+        "VariableType": "Text",
+		"Value": "Learn More",
+		"Metadata": {}
+    },
+    "DCO_MockTest_btn2":{
+        "VariableType": "Text",
+		"Value": "Read More",
+		"Metadata": {}
+    },
+    "DCO_MockTest_btn3":{
+        "VariableType": "Text",
+		"Value": "Discover More",
+		"Metadata": {}
+    }
+}
+

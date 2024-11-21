@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="ad.size" content="width=300,height=250" />
+
+  <title>Pixel Wireless Banner</title>
+  <script src="https://s0.2mdn.net/ads/studio/Enabler.js"></script>
+  <link type="text/css" rel="stylesheet" href="styles.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.1/knockout-min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+</head>
+
+<body style="visibility: hidden;">
+  <div id="banner" class="masterSize posAbsolute lt0">
+    
+    <!-- Frame 1 -->
+    <div id="frame1" class="posAbsolute w100 lt0">
+      <div id="bg" class="posAbsolute">
+        <img src="images/300x250_DCO_MockTest_BG.png" alt="bg-image" id="bgimg" data-bind="attr:{src:DCO_MockTest_BG.Value}">
+      </div>
+      <div id="logo" class="posAbsolute">
+        <img src="images/300x250_DCO_MockTest_logo.png" alt="logo" data-bind="attr:{src:DCO_MockTest_logo.Value}">
+      </div>
+      <div id="headline1" class="posAbsolute" data-bind="html:DCO_MockTest_Headline1.Value">
+        The phones you want <span class="blue-txt">at the speed you need.</span>
+      </div>
+    </div>
+    <!-- Frame 2 -->
+    <div id="frame2" class="posAbsolute w100 lt0">
+      <div>
+        <div id="headline2" class="posAbsolute" data-bind="html:DCO_MockTest_Headline2.Value">
+          <span class="red-txt">Free</span> <span class="blue-txt">5G phones</span> <span class="small-txt">with qualified plan purchases</span>
+        </div>
+        
+        <div class="pricelist">
+          <div id="price1" class="red-txt priceitems" data-slide="0" data-bind="html:DCO_MockTest_Price1.Value">
+            <sup>$</sup><span class="size-incre">3</span> <sup>99/month</sup>
+          </div>
+          <div id="price2" class="red-txt priceitems" data-slide="1" data-bind="html:DCO_MockTest_Price2.Value">
+            <sup>$</sup><span class="size-incre">4</span> <sup>99/month</sup>
+          </div>
+          <div id="price3" class="red-txt priceitems" data-slide="2" data-bind="html:DCO_MockTest_Price3.Value">
+            <sup>$</sup><span class="size-incre">5</span> <sup>99/month</sup>
+          </div>
+        </div>
+      </div>
+
+      <div id="side-carousel">
+        <div class="carousel">
+          <div class="carousel-inner">
+              <div class="carousel-item">
+                <img src="images/300x250_DCO_MockTest_product01.png" alt="carousel-img1" data-bind="attr:{src:DCO_MockTest_Carousel01.Value}">
+                <button id="learn-more1"><a href="https://www.google.com/" target="_blank" data-bind="html:DCO_MockTest_btn1.Value">Learn More</a></button>
+              </div>
+              <div class="carousel-item">
+                <img src="images/300x250_DCO_MockTest_product02.png" alt="carousel-img2" data-bind="attr:{src:DCO_MockTest_Carousel02.Value}">
+                <button id="learn-more2"><a href="https://www.facebook.com/" target="_blank" data-bind="html:DCO_MockTest_btn2.Value">Read More</a></button>
+              </div>
+              <div class="carousel-item">
+                <img src="images/300x250_DCO_MockTest_product03.png" alt="carousel-img3" data-bind="attr:{src:DCO_MockTest_Carousel03.Value}">
+                <button id="learn-more3"><a href="https://www.linkedin.com/" target="_blank" data-bind="html:DCO_MockTest_btn3.Value">Discover More</a></button>
+              </div>
+          </div>
+        </div>
+        <div class="carousel-indicators">
+            <div class="indicator" data-slide="0"></div>
+            <div class="indicator" data-slide="1"></div>
+            <div class="indicator" data-slide="2"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Button -->
+    <button id="full-terms" class="posAbsolute" onclick="openPopup()">
+      *Full terms
+    </button>
+    <!-- Button -->
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+      <span class="close-btn" onclick="closePopup()">×</span>
+      <div class="popup-content">
+        <p class="bold">Terms and conditions</p>
+        <p>Cell phones are often associated with a high cost, which may deter people from upgrading to a new device. But that doesn't have to be the case. If you're wondering how to get these great deals, start by exploring the multiple free phone promotion options that exist currently. By now you should have figured out this is all gibberish. But it would be really nice to see you make this pop out from the bottom. A nice animation with a rubber band effect will be an icing on the cake. Adobe designers, though at the Himalayas, are really something.</p>
+      </div>
+    </div>
+
+  </div>
+  <!-- <script src="data.json"></script> -->
+  <script>
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+          console.log(data);
+            document.getElementById('headline1').innerText = data.DCO_MockTest_Headline1.Value;
+            // document.getElementById('price1').innerText = data.DCO_MockTest_Price1.Value;
+            // Continue updating other elements as needed
+        })
+        .catch(error => console.error('Error fetching data:', error));
+</script>
+
+  <script type="text/javascript">
+    var clickTag = "https://www.google.com";
+    var clickArea = document.getElementById("banner");
+    // clickArea.onclick = function () {
+    //   window.open(clickTag, "_blank");
+    // };
+
+    // Function to open the popup
+    function openPopup() {
+        document.getElementById('popup').style.display = 'block';
+        document.getElementById('overlay').style.display = 'block';
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById('popup').style.display = 'none';
+        document.getElementById('overlay').style.display = 'none';
+    }
+
+
+    /* Function for Carousel */
+    document.addEventListener('DOMContentLoaded', () => {    
+    const slides = document.querySelector('.carousel-inner');    
+    const indicators = document.querySelectorAll('.indicator');    
+    const prices = document.querySelectorAll('.priceitems');    
+    const totalSlides = document.querySelectorAll('.carousel-item').length;    
+    let currentIndex = 0;    
+    function showSlide(index) {        
+        const offset = -index * 100;       
+        slides.style.transform = `translateX(${offset}%)`;        
+        updateText(index);        
+        updateIndicators(index);    
+    }    
+    function updateText(index) {        
+        prices.forEach((price, i) => {            
+            price.classList.toggle('active', i === index);        
+        });    
+    }    
+    function updateIndicators(index) {        
+        indicators.forEach((indicator, i) => {            
+            indicator.classList.toggle('active', i === index);        
+        });    
+    }  
+    
+    function goToNextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    indicators.forEach(indicator => {        
+        indicator.addEventListener('click', () => {           
+            const index = parseInt(indicator.getAttribute('data-slide'));            
+            currentIndex = index;            
+            showSlide(currentIndex);        
+        });    
+    });   
+    const autoSlideInterval = 3000; 
+    setInterval(goToNextSlide, autoSlideInterval); 
+    showSlide(currentIndex);});
+
+    
+    /* Function for Carousel */
+        
+  </script>
+</body>
+
+</html>
