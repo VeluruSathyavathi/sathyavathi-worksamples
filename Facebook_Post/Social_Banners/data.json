@@ -1,0 +1,105 @@
+{
+	"Width": 375,
+	"Height": 600,
+
+	"FB_Brand_Icon": {
+		"VariableType": "Image",
+		"Value": "brand_icon.png",
+		"Metadata": {}
+	},
+	"FB_Brand_Name": {
+		"VariableType": "Text",
+		"Value": "OFF!",
+		"Metadata": {}
+	},
+	"FB_Brand_Headline": {
+		"VariableType": "Text",
+		"Value": "100% Protection from mosquitoes",
+		"Metadata": {}
+	},
+	"CDO_1132_Image1":{
+		"VariableType": "Image",
+		"Value": "scrollimg1.png",
+		"Metadata": {}
+	},
+	"CDO_1132_Headline1": {
+		"VariableType": "Text",
+		"Value": "100% Protection from mosquitoes",
+		"Metadata": {}
+	},
+	"CDO_1132_Head1_Txtcolor": {
+		"VariableType": "Text",
+		"Value": "#EF5D2A",
+		"Metadata": {}
+	},
+	"CDO_1132_Logo":{
+		"VariableType": "Image",
+		"Value": "off_logo.png",
+		"Metadata": {}
+	},
+	"CDO_1132_text1": {
+		"VariableType": "Text",
+		"Value": "Online Offer $8.99",
+		"Metadata": {}
+	},
+	"CDO_1132_text1Clr": {
+		"VariableType": "Text",
+		"Value": "#000000",
+		"Metadata": {}
+	},
+	"CDO_1132_cta1": {
+		"VariableType": "Text",
+		"Value": "BUY NOW",
+		"Metadata": {}
+	},
+	"CDO_1132_cta1_color": {
+		"VariableType": "Text",
+		"Value": "#000000",
+		"Metadata": {}
+	},
+	"CDO_1132_cta1_BgColor": {
+		"VariableType": "Text",
+		"Value": "#F4F8F9",
+		"Metadata": {}
+	},
+	"CDO_1132_Image2":{
+		"VariableType": "Image",
+		"Value": "scrollimg2.png",
+		"Metadata": {}
+	},
+	"CDO_1132_Headline2": {
+		"VariableType": "Text",
+		"Value": "PROTECTION FROM MOSQUITOES",
+		"Metadata": {}
+	},
+	"CDO_1132_Head2_Txtcolor": {
+		"VariableType": "Text",
+		"Value": "#EF5D2A",
+		"Metadata": {}
+	},
+	"CDO_1132_text2": {
+		"VariableType": "Text",
+		"Value": "Online Offer $8.99",
+		"Metadata": {}
+	},
+	"CDO_1132_text2Clr": {
+		"VariableType": "Text",
+		"Value": "#000000",
+		"Metadata": {}
+	},
+	"CDO_1132_cta2": {
+		"VariableType": "Text",
+		"Value": "BUY NOW",
+		"Metadata": {}
+	},
+	"CDO_1132_cta2_color": {
+		"VariableType": "Text",
+		"Value": "#000000",
+		"Metadata": {}
+	},
+	"CDO_1132_cta2_BgColor": {
+		"VariableType": "Text",
+		"Value": "#F4F8F9",
+		"Metadata": {}
+	}
+}

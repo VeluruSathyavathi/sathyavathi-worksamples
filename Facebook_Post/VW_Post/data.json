@@ -1,0 +1,132 @@
+{
+	"Width": 320,
+	"Height": 551,
+
+	"FB_campaignName": {
+		"VariableType": "Text",
+		"Value": "FACEBOOK_TRAFFIC_FEED_1",
+		"Metadata":{}
+	},
+	"FB_adSetName": {
+		"VariableType": "Text",
+		"Value": "FACEBOOK_TRAFFIC_FEED_1",
+		"Metadata":{}
+	},
+	"FB_adName": {
+		"VariableType": "Text",
+		"Value": "FACEBOOK_TRAFFIC_FEED_1",
+		"Metadata":{}
+	},
+	"FB_campaignObjective": {
+		"VariableType": "Text",
+		"Value": "LINK_CLICK",
+		"Metadata":{}
+	},
+	"FB_adSetOptGoal": {
+		"VariableType": "Text",
+		"Value": "LINK_CLICK",
+		"Metadata":{}
+	},
+	"FB_adSetBillingEvent": {
+		"VariableType": "Text",
+		"Value": "LINK_CLICK",
+		"Metadata":{}
+	},
+	"FB_specialAdCategory": {
+		"VariableType": "Text",
+		"Value": "None",
+		"Metadata":{}
+	},
+	"FB_targetPublishers": {
+		"VariableType": "Text",
+		"Value": "",
+		"Metadata":{}
+	},
+	"FB_facebookPositions": {
+		"VariableType": "Text",
+		"Value": "",
+		"Metadata":{}
+	},
+	"FB_instagramPositions": {
+		"VariableType": "Text",
+		"Value": "",
+		"Metadata":{}
+	},
+	"FB_campaignBudget": {
+		"VariableType": "Text",
+		"Value": "100",
+		"Metadata":{}
+	},
+	"FB_targetCountries": {
+		"VariableType": "Text",
+		"Value": "GB",
+		"Metadata":{}
+	},
+	"FB_adSetStartTime": {
+		"VariableType": "Text",
+		"Value": "MM/DD/YY HH:MM",
+		"Metadata":{}
+	},
+	"FB_adSetEndTime": {
+		"VariableType": "Text",
+		"Value": "MM/DD/YY HH:MM",
+		"Metadata":{}
+	},
+	"FB_adCreativeBody": {
+		"VariableType": "Text",
+		"Value": "Destination Headline",
+		"Metadata":{}
+	},
+	"FB_adCreativeCtaType": {
+		"VariableType": "Text",
+		"Value": "LEARN_MORE",
+		"Metadata":{}
+	},
+	"FB_adCreativeLink": {
+		"VariableType": "Text",
+		"Value": "https://www.hc.com",
+		"Metadata":{}
+	},
+	"FB_adCreativeTitle": {
+		"VariableType": "Text",
+		"Value": "Primary Text: We recommend a max. of 125 characters.",
+		"Metadata":{}
+	},
+	"FB_adCreativeImageUrl": {
+		"VariableType": "Image",
+		"Value": "placeholder_image.png",
+		"Metadata":{}
+	},
+
+	"NB_Title": {
+		"VariableType": "Text",
+		"Value": "Harrington & Couch",
+		"Metadata": {}
+	},
+	"NB_Brand_Icon": {
+		"VariableType": "Image",
+		"Value": "brand_icon.png",
+		"Metadata": {}
+	},
+	"NB_Brand_Name": {
+		"VariableType": "Text",
+		"Value": "Harrington & Couch",
+		"Metadata": {}
+	},
+	"NB_Sponsored": {
+		"VariableType": "Text",
+		"Value": "Sponsored&nbsp;&bull;&nbsp;",
+		"Metadata": {}
+	},
+	"NB_Sponsored_Icon": {
+		"VariableType": "Image",
+		"Value": "fb_world_icon.png",
+		"Metadata": {}
+	},
+	"FB_description": {
+		"VariableType": "Text",
+		"Value": "Optional description",
+		"Metadata": {}
+	}
+
+}

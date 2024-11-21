@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SCJ Pitch - Social</title>
+    <link rel="stylesheet" href="fonts_64.css" inline>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+
+    <style>
+        body, div, img{
+            margin: 0;
+            padding: 0;
+            font-family: Helvetica;
+            color: #000000;
+        }
+
+        #container{
+            position: absolute;
+            width: 375px;
+            height: 500px;
+            background-color: #f1f2f5;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        #wrapper{
+            position: absolute;
+            height: 310px;
+            white-space: nowrap;
+            margin: 0px 10px 10px 20px;
+        }
+
+        .slide{
+            display: inline-block;
+            width: 255px;
+            height: auto;
+            background-color: #ffffff;
+            color: #000000;
+            border: 1px solid #cdced0;
+            border-radius: 5px;
+            margin-right: 18px;
+        }
+        .header {
+            height: auto;
+            position: relative;
+        }
+        .header .profileImage {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            margin: 10px;
+            margin-left: 13px;
+            border-radius: 50%;
+        }
+        .header .profileImage img {
+            width: 36px;
+            height: 36px;
+            /* border-radius: 50%;
+            border: 1px solid #ddd; */
+        }
+        .header .nameText {
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            width: 282px;
+        }
+        .header .nameText .name {
+            line-height: 18px;
+            color: #262626;
+            margin: 0px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .header .nameText .date {
+            font-size: 15px;
+            color: #6B6E72;
+        }
+        .header .nameText .iconPeople {
+            display: inline-block;
+            width: 12px;
+        }
+        .header .menuIcon img {
+            width: 20px;
+            height: 6px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            margin: 10px;
+        }
+        .worldImg{
+            width: 16px;
+            height: 16px;
+            position: relative;
+            top: 2px;
+            left: 2px;
+        }
+        .carouselContent{
+            height: auto;
+        }
+        .caption{
+            font-size: 17px;
+            line-height: 20px;
+            color: #1C1E21;
+            margin: 10px 10px 25px 13px;
+        }
+        .productTitle{
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+        .productUrl{
+            font-size: 13px;
+            margin: 0px;
+        }
+        .ctaWrapper{
+            display: table;
+            height: auto;
+            margin: 12px 10px 12px 10px;
+        }
+        .ctaContent{
+            display: table-cell;
+            vertical-align: middle;
+            width: 112px;
+            white-space: initial;
+        }
+        .cta{
+            position: relative;
+            width: 112px;
+            height: 25px;
+            padding: 0px;
+            border: 2px solid #64676A;
+            color: #000000;
+            font-size: 14px;
+            border-radius: 7px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+            text-transform: uppercase;
+            right: -8px;
+            background-color: #F4F8F9;
+        }
+        .slide3{
+            margin-right: 0px;
+        }
+        .footer{
+            position: absolute;
+            bottom: 0px;
+            width: 375px;
+            left: 0px;
+            padding: 12px 0px;
+            margin: 0px auto;
+            text-align: center;
+            border-top: 1px solid #cdced0;
+            color: #616770;
+        }
+        .like,.comment{
+            position: relative;
+            margin-right: 45px;
+            display: inline-block;
+            color: #616770;
+        }
+        .share{
+            display: inline-block;
+            color: #616770;
+        }
+        .iconAlign{
+            position: relative;
+            top: 4px;
+        }
+        .Image_Container{
+            overflow: hidden;
+            height: 225px;
+        }
+        .carouselImage{
+            min-width: 255px;
+            height: 225px;
+        }
+        .headline1{
+            position: absolute;
+            top: 0px;
+            font-family: 'gilroyextrabold';
+            color: #EF5D2A;
+            font-size: 25px;
+            line-height: 28px;
+            width: 235px;
+            white-space: initial;
+            margin: 10px 10px 0px 10px;
+            text-transform: uppercase;
+        }
+        .logoImg{
+            position: absolute;
+            bottom: 90px;
+            left: 190px;
+        }
+        .logoImg img{
+            width: 53px;
+        }
+        .headline2{
+            position: absolute;
+            top: 116px;
+            font-family: 'gilroyextrabold';
+            color: #EF5D2A;
+            font-size: 16px;
+            line-height: 19px;
+            width: 154px;
+            white-space: initial;
+            margin: 10px 10px 0px 10px;
+            text-transform: uppercase;
+            right: 20px;
+            text-align: center;
+        }
+        .subhead{
+            font-size: 16px;
+            line-height: 19px;
+        }
+        .logoImg2{
+            position: absolute;
+            top: 58px;
+            right: 75px;
+        }
+        .logoImg2 img{
+            width: 73px;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+<div id="container">
+    <div class="header">
+        <span class="profileImage">
+            <img src="brand_icon.png" alt="logo" data-bind="attr:{src:FB_Brand_Icon.Value}">
+        </span>
+        <div class="nameText">
+          <p class="name" data-bind="html:FB_Brand_Name.Value">OFF!</p>
+          <span id="dateBox" class="date">Sponsored •</span>
+          <span class="iconPeople">
+              <img src="fb_world_icon.png" alt="" class="worldImg">
+         </span>
+        </div>
+        <span class="menuIcon"><img src="fb_3dots_icon.png" alt=""></span>
+        <p class="caption" data-bind="html:FB_Brand_Headline.Value">100% Protection from mosquitoes</p>
+    </div>
+    <div id="wrapper">
+        <div class="slide">
+            <div class="carouselContent">
+                <div class="Image_Container">
+                    <img class="carouselImage" src="scrollimg1.png" alt="" data-bind="attr:{src:CDO_1132_Image1.Value}">
+                    <div class="headline1" data-bind="html:CDO_1132_Headline1.Value, style:{color:CDO_1132_Head1_Txtcolor.Value}">100% Protection from mosquitoes</div>
+                    <div class="logoImg"><img src="off_logo.png" data-bind="attr:{src:CDO_1132_Logo.Value}"></div>
+                </div>
+                <div class="ctaWrapper">
+                  <div class="ctaContent">
+                    <div class="productTitle" data-bind="html:CDO_1132_text1.Value, style:{color:CDO_1132_text1Clr.Value}">Online Offer $8.99</div>
+                  </div>
+                  <div id="cta" class="cta" data-bind="html:CDO_1132_cta1.Value, style:{color:CDO_1132_cta1_color.Value, backgroundColor:CDO_1132_cta1_BgColor.Value}">BUY NOW</div>
+                </div>
+            </div>
+        </div>
+        <div class="slide">
+            <div class="carouselContent">
+                <div class="Image_Container">
+                    <img class="carouselImage" src="scrollimg2.png" alt="" data-bind="attr:{src:CDO_1132_Image2.Value}">
+                    <div class="logoImg2"><img src="off_logo.png" data-bind="attr:{src:CDO_1132_Logo.Value}"></div>
+                    <div class="headline2" data-bind="html:CDO_1132_Headline2.Value, style:{color:CDO_1132_Head2_Txtcolor.Value}">PROTECTION FROM MOSQUITOES</div>
+                </div>
+                <div class="ctaWrapper">
+                  <div class="ctaContent">
+                    <div class="productTitle" data-bind="html:CDO_1132_text2.Value, style:{color:CDO_1132_text2Clr.Value}">Online Offer $8.99</div>
+                  </div>
+                  <div id="cta" class="cta" data-bind="html:CDO_1132_cta2.Value, style:{color:CDO_1132_cta2_color.Value, backgroundColor:CDO_1132_cta2_BgColor.Value}">BUY NOW</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="like">
+            <img src="fb_like.png" alt="" class="iconAlign">
+            <span>Like</span>
+        </div>
+        <div class="comment">
+            <img src="fb_comment.png" alt="" class="iconAlign">
+            <span>Comment</span>
+        </div>
+        <div class="share">
+            <img src="fb_share.png" alt="" class="iconAlign">
+            <span>Share</span>
+        </div>
+     </div>
+    
+</div>
+
+</body>
+
+<script type="text/javascript">
+
+var wrapper = document.getElementById('wrapper')
+
+var slide = document.getElementsByClassName('slide')
+console.log(slide)
+
+//Timeline
+var tl = gsap.timeline({ delay: 0, repeat: -1, repeatDelay: 0});
+
+tl.addLabel("start","+=1")
+.to(wrapper, 1, { x: -225 }, "start")
+
+tl.addLabel("phase_1","+=1")
+.to(wrapper, 1, { x: -225 }, "phase_1")
+
+// tl.addLabel("phase_2","+=1")
+// .to(wrapper, 1, { x: -765 }, "phase_2")
+
+tl.addLabel("reset","+=1")
+.to(wrapper, 2, { x: 0 }, "reset")
+
+
+</script>
+
+
+</html>
