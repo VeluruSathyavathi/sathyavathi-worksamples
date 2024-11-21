@@ -1,0 +1,67 @@
+@media screen and (max-width: 165px) and (max-height: 605px) and (min-width: 155px) and (min-height: 595px) {
+
+    #banner {
+        width: 160px;
+        height: 600px;
+    }
+
+    #logo{
+        position: absolute;
+        left: 24px;
+        top: 48px;
+        height: 93px;
+        width: 117px;
+    }
+
+    #image_1 img{
+        width: 160px; 
+        height: 600px;
+    }
+
+    #text_cta {
+        position: absolute;
+        text-align: center;
+        top: 170px;
+        padding: 0px 12px;
+        text-transform: uppercase;
+    }
+
+    #headline{
+        top: 185px;
+        font-size: 32px;
+        line-height: 31px;
+        width: 136px;
+    }
+
+    #subhead{
+       margin: 4px 0px 0px 0px;
+       font-size: 32px;
+       line-height: 31px;
+    }
+
+    .desktop_button {
+        background-color: #C63731;
+        border: none;
+        color: #ffffff;
+        padding: 10px 10px;
+        text-decoration: none;
+        border-radius: 50px;
+        margin: 0px auto;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        max-width: 107px;
+        width: 100%;
+    }
+
+    .mobile_button {
+        display: none;
+    } 
+    #button{
+        position: absolute;
+        bottom: 12px;
+        width: 100%;
+    }
+}
