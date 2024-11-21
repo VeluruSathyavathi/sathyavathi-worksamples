@@ -1,0 +1,173 @@
+@font-face {
+  font-family: "SText_CondRegular";
+  src: url("https://s0.2mdn.net/creatives/assets/4431188/MBCorpoSText-CondRegular.woff")
+    format("woff");
+}
+@font-face {
+  font-family: "ATitle_Regular";
+  src: url("https://s0.2mdn.net/creatives/assets/4431188/MBCorpoATitleCond-Regular.woff")
+    format("woff");
+}
+
+.stext {
+  font-family: "SText_CondRegular";
+}
+
+html {
+  background-color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 480px;
+  height: 320px;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: "ATitle_Regular";
+}
+
+#container {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 478px;
+  height: 318px;
+  cursor: pointer;
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: white;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.size {
+  width: 480px;
+  height: 320px;
+}
+
+.screen {
+  width: 480px;
+  height: 320px;
+  position: relative;
+}
+
+#logo {
+  z-index: 999;
+  transform: translateY(100px);
+}
+
+#header {
+  width: 240px;
+  transform: scale(1.5);
+  transform-origin: left;
+  z-index: 90;
+}
+
+.line {
+  display: block;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.text1,
+.text2 {
+  font-size: 24px;
+  line-height: 24px;
+  position: absolute;
+  top: 23px;
+  left: 247px;
+}
+
+.text2{
+font-size: 23px;
+}
+.text2 .med{
+font-size: 20px;
+}
+
+.text2 .big {
+  font-size: 30px;
+}
+
+.small {
+  font-size: 12px;
+}
+
+.text2 .spacer {
+  margin-top: 24px;
+  margin-bottom: 36px;
+}
+
+.text2 .line {
+  transform: translateY(50px);
+}
+
+.text3 {
+  font-size: 12px;
+  position: absolute;
+  top: 120px;
+  left: 247px;
+}
+
+.text3,
+#score {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.txt4 {
+  font-size: 25px;
+  position: absolute;
+  top: 7px;
+  left: 247px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+
+.txt5 {
+  font-size: 25px;
+  position: absolute;
+  top: 40px;
+  left: 247px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.cta {
+  position: relative;
+  top: 204px;
+  left: 249px;
+  width: 133px;
+  height: 35px;
+  background-color: #00adef;
+  border-radius: 2px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(-40%);
+}
+
+#overlay {
+  position: absolute;
+  left: 0;
+  width: 0;
+  opacity: 0;
+  height: 169px;
+  background-color: rgba(255, 255, 255, 0.391);
+  border-radius: 8px;
+}
+
+#textcta {
+  opacity: 0;
+  transform: translateX(-100%);
+}

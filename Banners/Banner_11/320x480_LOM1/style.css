@@ -1,0 +1,168 @@
+@font-face {
+  font-family: "SText_CondRegular";
+  src: url("https://s0.2mdn.net/creatives/assets/4431188/MBCorpoSText-CondRegular.woff")
+    format("woff");
+}
+@font-face {
+  font-family: "ATitle_Regular";
+  src: url("https://s0.2mdn.net/creatives/assets/4431188/MBCorpoATitleCond-Regular.woff")
+    format("woff");
+}
+
+.stext {
+  font-family: "SText_CondRegular";
+}
+
+html {
+  background-color: white;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 320px;
+  height: 480px;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: "ATitle_Regular";
+}
+
+#container {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 318px;
+  height: 478px;
+  cursor: pointer;
+  border: 1px solid #000000;
+  background-color: #000000;
+  color: white;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.size {
+  width: 320px;
+  height: 480px;
+}
+
+.screen {
+  width: 320px;
+  height: 480px;
+  position: relative;
+}
+
+#logo {
+  z-index: 999;
+  transform: translateY(100px);
+}
+
+#header {
+  width: 320px;
+  transform: scale(1.9) translateY(60px);
+  transform-origin: center;
+}
+
+.line {
+  display: block;
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.text1,
+.text2 {
+  font-size: 25px;
+  position: absolute;
+  top: 256px;
+  left: 20px;
+}
+
+.text2 {
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.text2 .big {
+  font-size: 39px;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.text2 .spacer {
+  margin-top: 18px;
+  margin-bottom: 28px;
+}
+
+.text2 .line {
+  transform: translateY(50px);
+}
+
+.text3 {
+  font-size: 12px;
+  position: absolute;
+  top: 342px;
+  left: 19px;
+}
+
+.text3,
+#score {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.txt4 {
+  font-size: 32px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.txt5 {
+  font-size: 32px;
+  position: absolute;
+  top: 56px;
+  left: 20px;
+
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.cta {
+  position: relative;
+  top: 305px;
+  left: 20px;
+  width: 160px;
+  height: 43px;
+  background-color: #00adef;
+  border-radius: 2px;
+  font-size: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transform: translateX(-120%);
+}
+
+#overlay {
+  position: absolute;
+  left: 0;
+  width: 0;
+  opacity: 0;
+  height: 42px;
+  background-color: rgba(255, 255, 255, 0.391);
+  border-radius: 8px;
+}
+
+#textcta {
+  opacity: 0;
+  transform: translateX(-100%);
+}
