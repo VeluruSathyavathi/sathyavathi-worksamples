@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="en" dir="ltr"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="04a0cfea-8a66-469f-87a2-d5d5e325eb0b.css" inline="">
+  <link rel="stylesheet" href="9b7baba2-0542-449c-824b-29b6d0e49d34.css" inline="">
+
+  <!-- <link rel="stylesheet" href="breakpoint_120x600.css" inline> -->
+  <!-- <link rel="stylesheet" href="breakpoint_160x600.css" inline> -->
+  <link rel="stylesheet" href="849a30c2-6cb3-4ac3-9d63-b7241c22752b.css" inline="">
+  <link rel="stylesheet" href="29c9127d-be54-4f00-8b80-7c361a2f738f.css" inline="">
+  <!-- <link rel="stylesheet" href="breakpoint_320x50.css" inline> -->
+  <link rel="stylesheet" href="44324c9d-ef2c-484d-a73f-36ed5071dbcf.css" inline="">
+  <!-- <link rel="stylesheet" href="breakpoint_970x250.css" inline> -->
+
+  <!-- Greensock -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+
+  <!-- ClickTag value setup/fallback -->
+  <script type="text/javascript">
+    /* Main Link*/
+    var clickTag = "#";
+  </script>
+
+  <title></title>
+
+</head>
+
+<body>
+
+  <div id="banner" class="hide">        
+
+      <!-- FRAME 5 -->
+      <div id="frame_5" class="frame">
+
+        <!-- IMAGE -->
+        <div class="bgImg">
+          <img src="cc1b5271-188f-4389-91da-f52ea9a10ea9.png" alt="">
+        </div>
+
+        <!-- HEADLINE & SUBHEADLINE -->
+        <div class="endframe-headline-lockup">
+          <span class="offerheadline">Offer Details</span>
+          <br>
+          <span class="headline">Offer Headline</span><br>
+          <span class="offerheadline">Price</span>
+        </div>
+        <!-- LEGAL -->
+        <div class="endframe_Legal_container">
+          <div class="subHeadline">Dealer Name</div>
+
+          <p id="frame1legalInfo">
+            <span>Dealer Location</span>
+           </p>
+        </div>
+        
+
+      </div>
+
+      <!-- FRAME 3 -->
+      <div id="frame_3" class="frame">
+
+        <!-- IMAGE -->
+        <div class="bgImg">
+          <img src="64e029af-affb-459e-af36-1f0a5cb7df5e.png" alt="">
+        </div>
+
+        <!-- HEADLINE & SUBHEADLINE -->
+        <div class="headline-lockup">
+            <span class="offerheadline">Offer Details</span>
+            <br>
+            <span class="headline">Offer Headline</span><br>
+            <span class="offerheadline">Price</span>
+          </div>
+
+        <!-- LEGAL -->
+        <div class="frameLegal_container">
+
+          <div class="subHeadline">Dealer Name</div>
+          
+          <p id="frame1legalInfo">
+            <span>Dealer Location</span>
+          </p>
+        </div> 
+
+      </div>
+
+      <!-- FRAME 2 -->
+      <div id="frame_2" class="frame">
+
+        <!-- IMAGE -->
+        <div class="bgImg">
+          <img src="87f2c512-d3c8-4f34-83df-e8466d651a72.png" alt="">
+        </div>
+
+        <!-- HEADLINE -->
+        <div class="headline-lockup">
+          <div class="headline">Feature Headline </div>
+        </div>
+
+        <!-- LEGAL -->
+        <div class="frameLegal_container">
+          <div class="subHeadline">Dealer Name</div>
+
+          <p id="frame1legalInfo">
+            <span>Dealer Location</span>
+           </p>
+        </div> 
+
+      </div>
+
+      
+
+      <!-- FRAME 1 -->
+      <div id="frame_1" class="frame">
+
+        <!-- IMAGE -->
+        <div class="bgImg">
+          <img src="15a4a14a-2866-43ec-a1d9-628b0e651944.png" alt="">
+        </div>
+
+        <!-- HEADLINE  -->
+        <div class="headline-lockup">
+          <div class="headline">Model Headline </div>
+
+          
+        </div>
+
+      </div>
+
+  <!-- LOGO -->
+  <div id="logo">
+    <img src="8c7ac3a8-b1d7-4286-b8d0-de7a037bf6ad.png" alt="Nissan_Logo">
+  </div>
+
+
+  <!-- CTA -->
+  <div id="cta-wrapper">
+    <div class="cta-btn">
+        <span>CTA</span>
+    </div>
+  </div>
+
+  <!-- EXIT LINK -->
+  <!-- <div id="exit_link"></div> -->
+    
+</div><!-- BANNER CONTAINER -->
+
+
+
+<script type="text/javascript">
+
+  ////////////
+  /// VARS ///
+  ////////////
+
+  function init() {
+    
+    ////////////////  
+    /// ELEMENTS ///
+    ////////////////
+
+    var element = {
+      banner: document.getElementById('banner'),
+      frame_1: document.getElementById('frame_1'),
+      frame_2: document.getElementById('frame_2'),
+      frame_3: document.getElementById('frame_3'),
+      frame_4: document.getElementById('frame_4'),
+      frame_5: document.getElementById('frame_5'),
+      legal: document.getElementsByClassName('frameLegal_container'),
+      cta_wrapper: document.getElementById('cta-wrapper'),
+      // exit_link: document.getElementById('exit_link'),
+    }
+
+    var globalTimeline = {
+      delay: 0,
+      repeat: 0,
+      repeatDelay: 0,
+    }
+
+    /////////////////////////////////////////////////////////
+    /// GET THE BANNER SIZE TO LOAD THE CORRECT ANIMATION ///
+    /////////////////////////////////////////////////////////
+
+    var bannerSize = {
+      w: window.innerWidth,
+      h: window.innerHeight
+    }
+
+    console.log('bannerSize: ', bannerSize)
+
+    if (bannerSize.w == 120 && bannerSize.h == 600) {
+      console.log('THIS IS 120x600');
+      animation_desktop()
+
+    } else if (bannerSize.w == 160 && bannerSize.h == 600) {
+      console.log('THIS IS 160x600');
+      animation_desktop()
+
+    } else if (bannerSize.w == 300 && bannerSize.h == 250) {
+      console.log('THIS IS 300x250');
+      animation_desktop()
+
+    } else if (bannerSize.w == 300 && bannerSize.h == 600) {
+      console.log('THIS IS 300x600');
+      animation_desktop()
+
+    } else if (bannerSize.w == 320 && bannerSize.h == 50) {
+      console.log('THIS IS 320x50');
+      animation_320x50()
+
+    } else if (bannerSize.w == 728 && bannerSize.h == 90) {
+      console.log('THIS IS 728x90');
+      animation_738x90()
+
+    } else if (bannerSize.w == 970 && bannerSize.h == 250) {
+      console.log('THIS IS 970x250');
+      animation_desktop()
+    }
+
+
+    //////////////////////////
+    /// ANIMATION PER SIZE ///
+    //////////////////////////        
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    function animation_desktop() {
+      console.log('animation desktop')
+
+      //Endframe
+      function endFrame() {
+        console.log('endFrame()');
+      }
+
+      //Timeline
+      var loopCounter = 0;
+      var tl = gsap.timeline({ delay: 0, repeat: globalTimeline.repeat, repeatDelay: globalTimeline.repeatDelay, onComplete: endFrame });
+
+      tl.addLabel("start")
+      .to(element.banner, 0, { opacity: 1 }, "start")
+
+      tl.addLabel('phase_1', "+=2.0")
+        .to(element.frame_1, 0.5, { width: 0, ease: "Power1.ease" },"phase_1")
+
+      tl.addLabel('phase_2', "+=2.0")
+      .to(element.frame_2, 0.5, { width: 0, ease: "Power1.ease" },"phase_2")
+
+      tl.addLabel('phase_3', "+=2.0")
+      .to(element.frame_3, 0.5, { width: 0, ease: "Power1.ease" },"phase_3")
+
+      // tl.addLabel('phase_4', "+=2.0")
+      // .to(element.frame_4, 0.5, { width: 0, ease: "Power1.ease" },"phase_4")
+
+      tl.addLabel('phase_5', "+=0.5")
+      .from(element.cta_wrapper, 0.5, { opacity: 0, ease: "Power1.ease" }, 'phase_5')
+
+    }
+    //////////////////////////////////////////////////////////////////////////////////////////
+    function animation_738x90() {
+      console.log('animation desktop')
+
+      //Endframe
+      function endFrame() {
+        console.log('endFrame()');
+      }
+
+      //Timeline
+      var loopCounter = 0;
+      var tl = gsap.timeline({ delay: 0, repeat: globalTimeline.repeat, repeatDelay: globalTimeline.repeatDelay, onComplete: endFrame });
+
+      tl.addLabel("start")
+      .to(element.banner, 0, { opacity: 1 }, "start")
+
+      tl.addLabel('phase_1', "+=2.0")
+        .to(element.frame_1, 0.5, { width: 0, ease: "Power1.ease" },"phase_1")
+
+      tl.addLabel('phase_2', "+=2.0")
+      .to(element.frame_2, 0.5, { width: 0, ease: "Power1.ease" },"phase_2")
+
+      tl.addLabel('phase_3', "+=2.0")
+      .to(element.frame_3, 0.5, { width: 0, ease: "Power1.ease" },"phase_3")
+
+      // tl.addLabel('phase_4', "+=2.0")
+      // .to(element.frame_4, 0.5, { width: 0, ease: "Power1.ease" },"phase_4")
+
+      tl.addLabel('phase_5', "+=0.5")
+      .from(element.cta_wrapper, 0.5, { opacity: 0, ease: "Power1.ease" }, 'phase_5')
+
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////
+    function animation_320x50() {
+
+      //Endframe
+      function endFrame() {
+        console.log('endFrame()');
+      }
+
+      //Timeline
+      var loopCounter = 0;
+      var tl = gsap.timeline({ delay: 0, repeat: globalTimeline.repeat, repeatDelay: globalTimeline.repeatDelay, onComplete: endFrame });
+
+      tl.addLabel("start")
+        .to(element.banner, 0, { opacity: 1 }, "start")     
+        .to(element.banner, 0, { opacity: 1 }, "start")      
+
+      tl.addLabel('phase_1', "+=2.0")
+      .to(element.legal, 0.5, { opacity: 0, ease: "Power1.ease" },"phase_1")
+
+      tl.addLabel('phase_5', "+=0.5")
+      .from(element.cta_wrapper, 0.5, { opacity: 0, x: bannerSize.w, ease: "Power1.ease" }, 'phase_5')
+    }
+
+    ////////////////////
+    /// EXIT HANDLER ///
+    ////////////////////
+
+    // function exitLink() {
+    //   console.log('exit Clicked')
+    //   window.open(clickTag, "_blank")
+    // }
+    // element.exit_link.addEventListener("click", exitLink); //Desktop
+
+  }
+
+  //Run the banner with a 1/10th of a second delay to queue the JS after onLoad()
+  setTimeout(() => {
+    init()
+  }, 100);
+
+</script>
+
+</body></html>
