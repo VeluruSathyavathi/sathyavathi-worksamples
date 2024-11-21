@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="ad.size" content="width=300, height=600">
+  <script type="text/javascript">
+    var clickTag = "https://www.google.fr";
+  </script>
+  <style media="screen">
+  html {
+      background-color: white;
+  }
+
+  body{
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    height: 600px;
+    overflow: hidden;
+    background: white;
+    cursor: pointer;
+  }
+
+  #container{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 298px;
+    height: 598px;
+    cursor: pointer;
+    border: 1px solid black;
+  }
+
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+  }
+
+.size{
+  width: 300px;
+  height: 600px;
+}
+
+  .bg{
+    transform: translateX(100%);
+
+  }
+
+  .fade{
+    opacity: 0;
+    transform: translateY(10%);
+  }
+
+  #text1b{top: 2px}
+  #text1c{top: 1.7px}
+  </style>
+</head>
+<body>
+
+  <a href="javascript:window.open(window.clickTag)">
+  <div id="container">
+
+    <img src="back1.jpg" id="back1" class="size">
+    <img src="back2.jpg" id="back2" class="size bg">
+    <img src="text1.png" id="text1" class="size fade txt">
+    <img src="text1b.png" id="text1b" class="size fade txt">
+    <img src="text1c.png" id="text1c" class="size fade txt">
+    <img src="back3.jpg" id="back3" class="size bg">
+    <img src="back4.jpg" id="back4" class="size bg">
+    <img src="text2.png" id="text2" class="size fade">
+    <img src="logo.png" id="logo" class="size">
+
+  </div>
+</a>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script type="text/javascript">
+    var tl = new TimelineLite();
+
+    function obj(item){
+      return document.getElementById(item);
+    }
+
+    tl.to([obj('back1')], 0.5, {x: "-100%", ease: "Power1.ease"}, "+=2");
+    tl.to([obj('back2')], 0.5, {x: "0%", ease: "Power1.ease"}, "-=0.5");
+    tl.to([".txt"], 1, {autoAlpha: 1, y:0,stagger: 0.1, ease: "elastic.out(1,0.5)"}, "+=0");
+    tl.to([obj('back2'), ".txt"], 0.5, {x: "-100%", ease: "Power1.ease"}, "+=2");
+    tl.to([obj('back3')], 0.5, {x: "0%", ease: "Power1.ease"}, "-=0.5");
+    tl.to([obj('back3')], 0.5, {x: "-100%", ease: "Power1.ease"}, "+=2");
+    tl.to([obj('back4')], 0.5, {x: "0%", ease: "Power1.ease"}, "-=0.5");
+    tl.to([obj('text2')], 1, {autoAlpha: 1, y:0, ease: "elastic.out(1,0.5)"}, "+=0");
+
+
+  </script>
+</body>
+</html>
