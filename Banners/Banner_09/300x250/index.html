@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Jaldi:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript">
+    var clickTag = "http://www.google.com";
+  </script>
+  <script>
+      document.write('<script src="'+ (window.API_URL || 'https://s1.adform.net/banners/scripts/rmb/Adform.DHTML.js?bv='+ Math.random()) +'"><\/script>');
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div id="screen1">
+      <img src="images/border.jpg" alt="" id="back" width="300" height="250">
+    </div> 
+    <div id="screen2">
+      <img src="images/text.png" alt="" id="txt1" width="300" height="250">
+    </div>
+    <div id="screen3">
+      <img src="images/cta.png" alt="" id="cta" width="300" height="250">
+    </div>
+    <div id="screen4">
+      <img src="images/click.png" alt="" id="clickimg" width="300" height="250">
+    </div>  
+    <!-- click tag -->
+    <a href="javascript:void(window.open(clickTag))">
+      <div id="container"></div>
+   </a>   
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+  <script src="main.js" charset="utf-8"></script>
+
+</body>
+</html>
