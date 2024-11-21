@@ -1,0 +1,45 @@
+container = document.getElementById("main-container");
+
+var tl = new TimelineMax({repeat:3, repeatDelay:2}); 
+ 
+ 
+window.addEventListener("load", function () {
+	init();
+});
+
+function init() {
+	container.style.visibility = "visible";
+	show();
+}
+
+
+//Adjust values below for each size
+//Background image adjustments
+
+ 
+//End of adjustments
+
+TimelineLite.prototype.wait = function(position) {
+	return this.set({}, {}, position);
+};
+
+// Shows the ad.
+function show() {
+  tl.addLabel('frame1', '+=0')
+  .to([txt1], 0.5, { autoAlpha: 1,ease: Linear.easeNone, force3D: true }, 'frame1+=0.5')
+  .to([txt1, img_01], 0.5, { autoAlpha: 0, ease: Linear.easeNone, force3D: true }, 'frame1+=3.5')
+
+  .to([txt2], 0.5, { autoAlpha: 1, ease: Linear.easeNone, force3D: true }, 'frame1+=4')
+  .to([txt2, img_02], 0.5, { autoAlpha: 0, ease: Linear.easeNone, force3D: true }, 'frame1+=7')
+
+  .to([txt3], 0.5, { autoAlpha: 1, ease: Linear.easeNone, force3D: true }, 'frame1+=7.5')
+  .to([txt3, img_03], 0.5, { autoAlpha: 0, ease: Linear.easeNone, force3D: true }, 'frame1+=10.5')
+
+  .to([txt4], 0.5, { autoAlpha: 1, ease: Linear.easeNone, force3D: true }, 'frame1+=11')
+  .to([cta_container], 0.5, { autoAlpha: 1, ease: Linear.easeNone, force3D: true }, 'frame1+=12')
+}
+
+// Exit Hnadlers
+
+ 
+ 

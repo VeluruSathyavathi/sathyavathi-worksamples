@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title></title>
+	<meta content="width=300,height=600" name="ad.size">
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	
+	<script type="text/javascript">
+		var clickTag = "https://support.google.com/campaignmanager/answer/3145300?hl=en";
+
+		function clickthrough() {
+			window.open(clickTag);
+		}
+	</script>
+
+</head>
+
+<body>
+	<div id="ad">
+		<div id="main-container" onclick="clickthrough()">
+			<img src="img_01.jpg" id="img_04">
+			<img src="img_03.jpg" id="img_03">
+			<img src="img_02.jpg" id="img_02">
+			<img src="img_01.jpg" id="img_01">
+
+			<div id="blackMask">
+				<div id="txt1">LE PRIX BERTHA BENZ<br>CÉLÈBRE L’AUDACE ET<br>L’INNOVATION RESPONSABLE.</div>
+				<div id="txt2">IL A ÉTÉ DÉCERNÉ<br>À MANON LEROUX</div>
+				<div id="txt3">POUR SAVE&CARE,<br>SON PROJET DURABLE<br>ET ENGAGÉ.</div>
+				<div id="txt4"> DÉCOUVREZ L’ÉVÉNEMENT ET<br>LA LAURÉATE RÉCOMPENSÉE.</div>
+
+				<div id="ctaAlign">
+					<div id="cta_container">
+						<div id="cta">EN SAVOIR PLUS</div>
+					</div>
+				</div>
+				
+			</div>
+			<img src="logo.png" id="logo">
+
+				<div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 1px; z-index: 9000; background-color: rgb(0, 0, 0);"></div>
+                <div style="position: absolute; right: 0px; top: 0px; width: 1px; height: 100%; z-index: 9000; background-color: rgb(0, 0, 0);"></div>
+                <div style="position: absolute; left: 0px; bottom: 0px; width: 100%; height: 1px; z-index: 9000; background-color: rgb(0, 0, 0);"></div>
+                <div style="position: absolute; left: 0px; top: 0px; width: 1px; height: 100%; z-index: 9000; background-color: rgb(0, 0, 0);"></div>
+		
+			</div>
+	</div>
+
+	<script src="https://s0.2mdn.net/ads/studio/cached_libs/gsap_3.5.1_min.js"></script>
+	<script src="logic.js"></script>
+
+</body>
+
+</html>
